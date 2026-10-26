@@ -14,8 +14,9 @@
 // Note: everything is one loopback host — the RTT comparison measures
 // framing/queueing overhead of the two transports, not WAN physics.
 import { spawn } from "node:child_process";
-import { writeFileSync, mkdirSync } from "node:fs";
+import { writeFileSync, mkdirSync, existsSync, readFileSync } from "node:fs";
 import net from "node:net";
+import { validateResults } from "./validate-results.mjs";
 
 const OUT = new URL(".", import.meta.url).pathname;
 mkdirSync(OUT + "out", { recursive: true });
@@ -68,7 +69,12 @@ function rawUpgrade(port, path, origin) {
 
 // ---------------------------------------------------------------- chromium
 const PORT = 9500 + Math.floor(Math.random() * 400);
-const chrome = spawn("/opt/meta-chromium/chrome", [
+const chromeBin = process.env.CHROME_BIN || [
+  "/opt/meta-chromium/chrome", "/usr/bin/chromium", "/usr/bin/chromium-browser",
+  "/usr/bin/google-chrome", "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+].find(existsSync);
+if (!chromeBin) throw new Error("Chromium not found; set CHROME_BIN to its executable path");
+const chrome = spawn(chromeBin, [
   "--headless=new", "--no-sandbox", "--disable-gpu", "--disable-dev-shm-usage",
   "--no-proxy-server",
   "--disable-features=LocalNetworkAccessChecks,BlockInsecurePrivateNetworkRequests",
@@ -85,7 +91,7 @@ async function waitVersion() {
   throw new Error("chromium never came up");
 }
 
-const results = { total: TOTAL, note: "loopback-only comparison: framing/queueing overhead, not WAN physics" };
+const results = { total: TOTAL, runAt: new Date().toISOString(), note: "loopback-only comparison: framing/queueing overhead, not WAN physics" };
 try {
   const version = await waitVersion();
   const ws = new WebSocket(version.webSocketDebuggerUrl);
@@ -189,6 +195,14 @@ results.sessionCap = { first: h1.status, second: h2.status, thirdOverCap: h3.sta
 h1.sock.destroy(); h2.sock.destroy(); h3.sock.destroy();
 lap(`cap: ${JSON.stringify(results.sessionCap)}`);
 
+const gatewayLog = OUT + "out/gateway.log";
+results.gatewayRateLimit = existsSync(gatewayLog) && readFileSync(gatewayLog, "utf8").split("\n")
+  .some(line => line.includes(" session_close ") && line.includes("reason=rate_limit ") && line.includes("rate_drops=10"));
+const bridgeLog = OUT + "out/bridge.log";
+results.bridgeRateLimit = existsSync(bridgeLog) && readFileSync(bridgeLog, "utf8").split("\n")
+  .some(line => line.includes(" session_close ") && line.includes("reason=rate_limit ") && line.includes("rate_drops=10"));
+results.validation = validateResults(results, { allowBlockedRTC: process.env.PROOF_ALLOW_BLOCKED_RTC === "1" });
 writeFileSync(OUT + "results.json", JSON.stringify(results, null, 2));
 console.log(JSON.stringify(results, null, 2));
+if (results.validation.some(c => c.status === "fail")) process.exitCode = 1;
 lap("wrote results.json");

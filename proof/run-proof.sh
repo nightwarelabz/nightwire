@@ -15,25 +15,51 @@ set -eu
 cd "$(dirname "$0")"
 mkdir -p out
 
+GO="${GO:-$(command -v go || true)}"
+[ -n "$GO" ] || GO="$HOME/workspace/.tools/go/bin/go"
+command -v "$GO" >/dev/null 2>&1 || { echo "run-proof: Go is required; put it on PATH or set GO" >&2; exit 1; }
+if [ -n "${PROOF_RTC_BIN:-}" ]; then
+    RTC_BIN="$PROOF_RTC_BIN"
+else
+    case "$(uname -s)-$(uname -m)" in
+        Darwin-arm64) RTC_BIN="../dist/sparta-rtc-darwin-arm64" ;;
+        Linux-x86_64) RTC_BIN="../dist/sparta-rtc-linux-amd64" ;;
+        *) echo "run-proof: set PROOF_RTC_BIN to a native gateway binary" >&2; exit 1 ;;
+    esac
+fi
+BRIDGE="${PROOF_BRIDGE_SCRIPT:-../../bridge/sparta-bridge.py}"
+[ -x "$RTC_BIN" ] || { echo "run-proof: build the native gateway first: $RTC_BIN" >&2; exit 1; }
+[ -f "$BRIDGE" ] || { echo "run-proof: set PROOF_BRIDGE_SCRIPT to the real sparta-bridge.py checkout" >&2; exit 1; }
+
 # Preflight: a stale instance on any proof port would silently shadow
 # this run (the new gateway would fail to bind and the tests would hit
 # the old one). Refuse to run in that state.
-for p in 26003 26011 26013 26099; do
+for p in 26003 26011 26013; do
     if python3 -c "import socket,sys; s=socket.socket(); sys.exit(0 if s.connect_ex(('127.0.0.1',$p))==0 else 1)"; then
         echo "run-proof: port $p is already in use — kill the stale process first" >&2
         exit 1
     fi
 done
+python3 -c "import socket; s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM); s.bind(('127.0.0.1',26099)); s.close()"
 
-RTC_BIN="../dist/sparta-rtc-linux-amd64"
-BRIDGE="../../bridge/sparta-bridge.py"
+# Old logs must never satisfy a new assertion.
+for log in gateway.log gateway-cap.log bridge.log; do
+    : > "out/$log"
+done
+(cd .. && "$GO" test -race -count=1 -v ./...) > out/go-test.log 2>&1 || {
+    cat out/go-test.log >&2
+    exit 1
+}
+
 PAGE_ORIGIN="null"
 PIDS=""
 cleanup() {
     # shellcheck disable=SC2086
     [ -n "$PIDS" ] && kill $PIDS 2>/dev/null || true
 }
-trap cleanup EXIT INT TERM
+trap cleanup EXIT
+trap 'exit 130' INT
+trap 'exit 143' TERM
 
 python3 udp_echo.py 26099 > out/echo.log 2>&1 &
 PIDS="$PIDS $!"
@@ -54,15 +80,18 @@ python3 "$BRIDGE" --bind 127.0.0.1 --port 26011 \
     --log-file "$PWD/out/bridge.log" > out/bridge-stdout.log 2>&1 &
 PIDS="$PIDS $!"
 sleep 1
+for pid in $PIDS; do
+    kill -0 "$pid" 2>/dev/null || { echo "run-proof: a proof service exited; inspect out/ logs" >&2; exit 1; }
+done
 
-node drive-proof.mjs
-
-# Gateway guard unit tests (rate window, registry cap, origin law).
-GO="$HOME/workspace/.tools/go/bin/go"
-if [ -x "$GO" ]; then
-    (cd .. && GOPATH="$HOME/workspace/.tools/gopath" \
-        GOCACHE="$HOME/workspace/.tools/gocache" \
-        "$GO" test -count=1 -v .) > out/go-test.log 2>&1 || true
+status=0
+rm -f results.json
+node drive-proof.mjs || status=$?
+if [ -f results.json ]; then
+    python3 summarize.py
+else
+    echo "run-proof: browser driver produced no results" >&2
+    status=1
 fi
-python3 summarize.py
 echo "run-proof: results in proof/results.json + proof/results.md; logs in proof/out/"
+exit "$status"

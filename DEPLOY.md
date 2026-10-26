@@ -17,10 +17,10 @@ From this directory (`~/workspace/thisissparta2/webrtc/` in the
 workspace) copy to `~/thisissparta2/webrtc/` on the Mac, preserving
 layout:
 
-- `dist/sparta-rtc-darwin-arm64` — sha256
-  `8117b13e420db2e32190996bf95d3e4dd5a0d28a3be1fcd7e594ab051acf0bb1`
-  (10,890,210 B, Mach-O arm64; verify on the Mac with
-  `shasum -a 256` before running it)
+- `dist/sparta-rtc-darwin-arm64` and `dist/SHA256SUMS` from the same
+  `./build.sh` run (Mach-O arm64; verify its hash against the manifest
+  with `shasum -a 256` before running it). Historical report hashes
+  describe the original binary, not a rebuilt gateway.
 - `run-gateway-mac.sh` (make it executable)
 - `proof/` (for step 3's completion run; optional but recommended)
 
@@ -87,14 +87,18 @@ worker's harness is turnkey:
 
 ```sh
 cd ~/thisissparta2/webrtc/proof
-./run-proof.sh    # DC workload vs the gateway + echo sink, plus the
-                  # WS/bridge comparison; writes results into proof/
+PROOF_BRIDGE_SCRIPT=/absolute/path/to/sparta-bridge.py \
+CHROME_BIN='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' \
+./run-proof.sh    # native Mac gateway selected automatically
 ```
 
 Expect, per the lab's WS-side numbers: the DC workload completes
 300/300 with 0 checksum / 0 byte-equality / 0 boundary failures, and
 the gateway's own `rate_limit` close fires end-to-end on the blast.
-If ICE stalls at `checking` on the Mac too, read `gateway.log`
+The harness now fails if any required check fails; the report labels
+explicitly allowed diagnostic media failures as blocked. `go test -race
+./...` independently checks the real local DataChannel/UDP pipe without
+the browser or bridge checkout. If ICE stalls at `checking` on the Mac, read `gateway.log`
 first — that would be a NAT/firewall fact to chase (the runbook
 suspect is inbound UDP 26100–26299, the pinned ICE ephemeral range),
 not a client defect: the client falls back to the bridge meanwhile.
