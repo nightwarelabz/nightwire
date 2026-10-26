@@ -1,0 +1,36 @@
+2026-10-26T04:15:44.958Z listen bind=127.0.0.1 port=26011 server=127.0.0.1:26099 max_sessions=64 idle_timeout=120 max_pps=300 origins=http://127.0.0.1:26180
+2026-10-26T04:16:00.352Z signal signum=15
+2026-10-26T04:16:00.484Z shutdown sessions=0
+2026-10-26T04:16:48.055Z listen bind=127.0.0.1 port=26011 server=127.0.0.1:26099 max_sessions=64 idle_timeout=120 max_pps=300 origins=file://
+2026-10-26T04:16:53.719Z signal signum=15
+2026-10-26T04:16:54.096Z shutdown sessions=0
+2026-10-26T04:17:07.203Z listen bind=127.0.0.1 port=26011 server=127.0.0.1:26099 max_sessions=64 idle_timeout=120 max_pps=300 origins=null
+2026-10-26T04:17:29.316Z signal signum=15
+2026-10-26T04:17:29.740Z shutdown sessions=0
+2026-10-26T04:27:35.926Z listen bind=127.0.0.1 port=26011 server=127.0.0.1:26099 max_sessions=64 idle_timeout=120 max_pps=300 origins=null
+2026-10-26T04:27:54.232Z session_open session=1 peer=127.0.0.1:39820 origin=null subprotocol=-
+2026-10-26T04:28:54.245Z session_close session=1 peer=127.0.0.1:39820 reason=client_close_1000 seconds=60.0 to_server_pkts=300 to_server_bytes=795876 to_client_pkts=294 to_client_bytes=768042 rate_drops=0 udp_errors=0
+2026-10-26T04:28:54.250Z session_open session=2 peer=127.0.0.1:59146 origin=null subprotocol=-
+2026-10-26T04:28:54.266Z rate_drop session=2 drops=1
+2026-10-26T04:28:54.266Z rate_drop session=2 drops=10
+2026-10-26T04:28:54.266Z session_close session=2 peer=127.0.0.1:59146 reason=rate_limit seconds=0.0 to_server_pkts=300 to_server_bytes=9600 to_client_pkts=262 to_client_bytes=8384 rate_drops=10 udp_errors=0
+2026-10-26T04:31:50.778Z signal signum=15
+2026-10-26T04:31:50.950Z shutdown sessions=0
+2026-10-26T04:33:27.306Z listen bind=127.0.0.1 port=26011 server=127.0.0.1:26099 max_sessions=64 idle_timeout=120 max_pps=300 origins=null
+2026-10-26T04:33:48.407Z session_open session=1 peer=127.0.0.1:56920 origin=null subprotocol=-
+2026-10-26T04:33:51.480Z session_close session=1 peer=127.0.0.1:56920 reason=client_close_1000 seconds=3.1 to_server_pkts=300 to_server_bytes=795876 to_client_pkts=300 to_client_bytes=795876 rate_drops=0 udp_errors=0
+2026-10-26T04:33:51.489Z session_open session=2 peer=127.0.0.1:53558 origin=null subprotocol=-
+2026-10-26T04:33:51.505Z rate_drop session=2 drops=1
+2026-10-26T04:33:51.508Z rate_drop session=2 drops=10
+2026-10-26T04:33:51.508Z session_close session=2 peer=127.0.0.1:53558 reason=rate_limit seconds=0.0 to_server_pkts=300 to_server_bytes=9600 to_client_pkts=202 to_client_bytes=6464 rate_drops=10 udp_errors=0
+2026-10-26T04:36:26.038Z signal signum=15
+2026-10-26T04:36:26.163Z shutdown sessions=0
+2026-10-26T04:36:58.768Z listen bind=127.0.0.1 port=26011 server=127.0.0.1:26099 max_sessions=64 idle_timeout=120 max_pps=300 origins=null
+2026-10-26T04:37:18.773Z session_open session=1 peer=127.0.0.1:35068 origin=null subprotocol=-
+2026-10-26T04:37:21.847Z session_close session=1 peer=127.0.0.1:35068 reason=client_close_1000 seconds=3.1 to_server_pkts=300 to_server_bytes=795876 to_client_pkts=300 to_client_bytes=795876 rate_drops=0 udp_errors=0
+2026-10-26T04:37:21.854Z session_open session=2 peer=127.0.0.1:50574 origin=null subprotocol=-
+2026-10-26T04:37:21.867Z rate_drop session=2 drops=1
+2026-10-26T04:37:21.868Z rate_drop session=2 drops=10
+2026-10-26T04:37:21.868Z session_close session=2 peer=127.0.0.1:50574 reason=rate_limit seconds=0.0 to_server_pkts=300 to_server_bytes=9600 to_client_pkts=197 to_client_bytes=6304 rate_drops=10 udp_errors=0
+2026-10-26T04:39:56.130Z signal signum=15
+2026-10-26T04:39:56.536Z shutdown sessions=0

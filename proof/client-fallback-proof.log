@@ -1,0 +1,7 @@
+client-fallback-proof — play frame: /home/hatch/workspace/rtc-tree/dist/nexuiz/play.js
+  unit: /rtc derivation (root, path, trailing slash) + 8000 ms budget — pass
+  (i) signaling refused -> OPEN via fallback, CONNECTING-time send flushed, 1000-byte view round-trip byte-exact — pass
+  (ii) RTCPeerConnection undefined -> OPEN via fallback, bytes round-trip — pass
+  (iii) non-house URL -> genuine WebSocket instance (original prototype), untouched echo — pass
+  (iv) signaling accepted but silent -> budget expiry at 8004 ms -> OPEN via fallback, bytes round-trip — pass
+client-fallback-proof: ALL PASS

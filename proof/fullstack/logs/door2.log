@@ -1,0 +1,7 @@
+2026-10-26T04:58:12.419Z door on 26002: /rtc->26003, else->26001
+2026-10-26T04:59:35.225Z upgrade GET /rtc HTTP/1.1 -> backend 26003
+2026-10-26T04:59:43.176Z upgrade GET / HTTP/1.1 -> backend 26001
+2026-10-26T04:59:49.591Z upgrade GET /rtc HTTP/1.1 -> backend 26003
+2026-10-26T04:59:58.277Z upgrade GET / HTTP/1.1 -> backend 26001
+2026-10-26T05:03:12.609Z upgrade GET / HTTP/1.1 -> backend 26001
+2026-10-26T05:03:26.864Z upgrade GET / HTTP/1.1 -> backend 26001

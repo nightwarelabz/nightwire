@@ -1,0 +1,1076 @@
+Nexuiz Linux 09:56:00 Oct 25 2026 - release
+Trying to load library... "libz.so.1" - loaded.
+Added packfile data/common-spog.pk3 (26 files)
+Added packfile data/data20091001.pk3 (9053 files)
+Added packfile data/sparta-csprogs.pk3 (1 files)
+Added packfile data/sparta-evilspace.pk3 (2 files)
+Trying to load library... "libcurl.so.4" - loaded.
+execing quake.rc
+execing default.cfg
+execing defaultNexuiz.cfg
+Warning: Could not expand $qport in alias if_dedicated
+execing physics26.cfg
+execing ctfscoring-div0.cfg
+execing balance.cfg
+execing effects-normal.cfg
+Warning: Could not expand $r_showsurfaces
+Warning: Could not expand $gl_finish
+Warning: Could not expand $v_kicktime
+Warning: Could not expand $qport in alias if_dedicated
+execing turrets.cfg
+execing unit_machinegun.cfg
+execing unit_hk.cfg
+execing unit_hellion.cfg
+execing unit_mlrs.cfg
+execing unit_flac.cfg
+execing unit_fusreac.cfg
+execing unit_plasma.cfg
+execing unit_plasma2.cfg
+execing unit_tesla.cfg
+execing unit_phaser.cfg
+execing unit_walker.cfg
+execing unit_ewheel.cfg
+couldn't exec unit_repulsor.cfg
+execing default25.cfg
+execing physics25.cfg
+execing balance25.cfg
+couldn't exec config.cfg
+couldn't exec data/campaign.cfg
+execing config_update.cfg
+Warning: Could not expand $vid_conwidth
+Warning: Could not expand $vid_conheight
+Warning: Could not expand $r_dynamic in alias _update_generic
+couldn't exec autoexec.cfg
+execing thisissparta2.cfg
+"maxplayers" set to "16"
+Server using port 26000
+Server listening on address 0.0.0.0:26000
+Server listening on address [0:0:0:0:0:0:0:0]:26000
+Loading csprogs.dat
+server detected csqc progs file "csprogs.dat" with size 467980 and crc 21449
+Compressing csprogs.dat
+Deflated: 70.619%
+"fraglimit" changed to "300"
+"timelimit" changed to "20"
+"fraglimit" changed to "10"
+"teamplay" changed to "4"
+Initializing ClientSide information entities
+:gamestart:ctf_evilspace:0.0.687798
+:gameinfo:mutators:LIST:grappling_hook:minstagib
+:gameinfo:end
+:join:1:1:bot:[BOT]Thunderstorm
+:team:1:5
+[1;34m[BOT]Thunderstorm connected and joined the [1;31mRed Team[m
+:join:2:2:bot:[BOT]Discovery
+:team:2:14
+[1;34m[BOT]Discovery connected and joined the Blue Team[m
+:join:3:3:bot:[BOT]Lion
+:team:3:5
+[1;34m[BOT]Lion connected and joined the [1;31mRed Team[m
+:join:4:4:bot:[BOT]Death
+:team:4:14
+[1;34m[BOT]Death connected and joined the Blue Team[m
+:join:5:5:bot:[BOT]Sensible
+:team:5:5
+[1;34m[BOT]Sensible connected and joined the [1;31mRed Team[m
+:join:6:6:bot:[BOT]Airhead
+:team:6:14
+[1;34m[BOT]Airhead connected and joined the Blue Team[m
+unconnected changed name to [BOT]Thunderstorm
+unconnected changed name to [BOT]Discovery
+unconnected changed name to [BOT]Lion
+unconnected changed name to [BOT]Death
+unconnected changed name to [BOT]Sensible
+unconnected changed name to [BOT]Airhead
+[1;31m[BOT]Lion drew first blood[m
+[1;31m[BOT]Discovery has been vaporized by [BOT]Lion[m
+:kill:frag:3:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=11:items=11:victimitems=11
+[BOT]Death got the [1;31mRED[m flag
+:ctf:steal:5:4
+[1;31m[BOT]Lion has been vaporized by [BOT]Discovery[m
+:kill:frag:2:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Sensible[m
+:kill:frag:5:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+:kill:frag:6:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Airhead[m
+:kill:frag:6:3:type=2059:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Sensible[m
+:kill:frag:5:6:type=2059:items=11:victimitems=11
+[BOT]Death captured the [1;31mRED[m flag in 8.05 seconds
+:recordset:4:8.050000
+:ctf:capture:5:4
+[1;31m[BOT]Lion has been vaporized by [BOT]Airhead[m
+:kill:frag:6:3:type=11:items=11:victimitems=11
+[BOT]Thunderstorm got the [1;34mBLUE[m flag
+:ctf:steal:14:1
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+:kill:frag:4:1:type=11:items=11:victimitems=11F
+[BOT]Thunderstorm lost the [1;34mBLUE[m flag
+:ctf:dropped:5:1
+[1;31m[BOT]Lion has been vaporized by [BOT]Discovery[m
+:kill:frag:2:3:type=11:items=11:victimitems=11
+[BOT]Sensible picked up the [1;34mBLUE[m flag
+:ctf:pickup:14:5
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+[1;31m[BOT]Death has 3 frags in a row[m
+:kill:frag:4:5:type=11:items=11:victimitems=11F
+[BOT]Death made a [1;31mTRIPLE FRAG[m
+[BOT]Sensible lost the [1;34mBLUE[m flag
+:ctf:dropped:5:5
+[BOT]Death returned the [1;34mBLUE[m flag
+:ctf:return:14:4
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+[1;31m[BOT]Death has 4 frags in a row[m
+:kill:frag:4:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+[1;31m[BOT]Death has 5 frags in a row[m
+:kill:frag:4:5:type=11:items=11:victimitems=11
+[BOT]Death unleashes [1;31mRAGE[m
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+[1;31m[BOT]Death has 6 frags in a row[m
+:kill:frag:4:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Lion[m
+[1;31m[BOT]Death's 6 kill spree was ended by [BOT]Lion[m
+:kill:frag:3:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Sensible[m
+:kill:frag:5:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Airhead[m
+:kill:frag:6:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Lion[m
+:kill:frag:3:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Airhead[m
+:kill:frag:6:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+[1;31m[BOT]Thunderstorm has 3 frags in a row[m
+:kill:frag:1:4:type=11:items=11:victimitems=11
+[BOT]Thunderstorm made a [1;31mTRIPLE FRAG[m
+[1;31m[BOT]Discovery has been vaporized by [BOT]Thunderstorm[m
+[1;31m[BOT]Thunderstorm has 4 frags in a row[m
+:kill:frag:1:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Thunderstorm[m
+[1;31m[BOT]Thunderstorm has 5 frags in a row[m
+:kill:frag:1:6:type=11:items=11:victimitems=11
+[BOT]Thunderstorm unleashes [1;31mRAGE[m
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+[1;31m[BOT]Thunderstorm's 5 kill spree was ended by [BOT]Airhead[m
+:kill:frag:6:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Sensible[m
+:kill:frag:5:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Sensible[m
+:kill:frag:5:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion was in the wrong place[m
+:kill:accident:3:3:type=10003:items=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Discovery[m
+:kill:frag:2:3:type=2059:items=11:victimitems=11
+[1;31m[BOT]Death was in the wrong place[m
+:kill:accident:4:4:type=10003:items=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Sensible[m
+:kill:frag:5:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+:kill:frag:4:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Lion[m
+:kill:frag:3:4:type=11:items=11:victimitems=11
+[BOT]Sensible got the [1;34mBLUE[m flag
+:ctf:steal:14:5
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+:kill:frag:6:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Lion[m
+:kill:frag:3:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Death mows down a team mate[m
+:kill:tk:4:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Discovery[m
+:kill:frag:2:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=11:items=11:victimitems=11F
+[BOT]Sensible lost the [1;34mBLUE[m flag
+:ctf:dropped:5:5
+[1;31m[BOT]Discovery has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Lion[m
+:kill:frag:3:4:type=11:items=11:victimitems=11
+[BOT]Lion picked up the [1;34mBLUE[m flag
+:ctf:pickup:14:3
+[1;31m[BOT]Death has been vaporized by [BOT]Sensible[m
+:kill:frag:5:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Airhead[m
+:kill:frag:6:3:type=11:items=11:victimitems=11F
+[BOT]Lion lost the [1;34mBLUE[m flag
+:ctf:dropped:5:3
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=11:items=11:victimitems=11
+[BOT]Thunderstorm picked up the [1;34mBLUE[m flag
+:ctf:pickup:14:1
+[1;31m[BOT]Airhead has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:6:type=11:items=11F:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Discovery[m
+:kill:frag:2:1:type=11:items=11:victimitems=11F
+[BOT]Thunderstorm lost the [1;34mBLUE[m flag
+:ctf:dropped:5:1
+The [1;34mBLUE[m flag has returned to base
+:ctf:returned:14
+[1;31m[BOT]Sensible has been vaporized by [BOT]Discovery[m
+:kill:frag:2:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Death was in the wrong place[m
+:kill:accident:4:4:type=10003:items=11
+[1;31m[BOT]Discovery was in the wrong place[m
+:kill:accident:2:2:type=10003:items=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Sensible[m
+:kill:frag:5:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Sensible[m
+:kill:frag:5:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:2:type=11:items=11:victimitems=11
+LHNET_Write: sendto returned error: Operation not permitted
+LHNET_Write: sendto returned error: Operation not permitted
+LHNET_Write: sendto returned error: Operation not permitted
+LHNET_Write: sendto returned error: Operation not permitted
+LHNET_Write: sendto returned error: Operation not permitted
+LHNET_Write: sendto returned error: Operation not permitted
+LHNET_Write: sendto returned error: Operation not permitted
+LHNET_Write: sendto returned error: Operation not permitted
+LHNET_Write: sendto returned error: Operation not permitted
+LHNET_Write: sendto returned error: Operation not permitted
+[BOT]Thunderstorm got the [1;34mBLUE[m flag
+:ctf:steal:14:1
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+:kill:frag:6:1:type=11:items=11:victimitems=11F
+[BOT]Thunderstorm lost the [1;34mBLUE[m flag
+:ctf:dropped:5:1
+[BOT]Airhead returned the [1;34mBLUE[m flag
+:ctf:return:14:6
+[1;31m[BOT]Lion has been vaporized by [BOT]Airhead[m
+:kill:frag:6:3:type=2059:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=2059:items=11:victimitems=11
+[BOT]Airhead got the [1;31mRED[m flag
+:ctf:steal:5:6
+[1;31m[BOT]Sensible has been vaporized by [BOT]Discovery[m
+:kill:frag:2:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:6:type=11:items=11:victimitems=11F
+[BOT]Airhead lost the [1;31mRED[m flag
+:ctf:dropped:14:6
+[BOT]Thunderstorm returned the [1;31mRED[m flag
+:ctf:return:5:1
+[1;31m[BOT]Discovery has been vaporized by [BOT]Sensible[m
+:kill:frag:5:2:type=11:items=11:victimitems=11
+[BOT]Death got the [1;31mRED[m flag
+:ctf:steal:5:4
+[1;31m[BOT]Sensible has been vaporized by [BOT]Discovery[m
+:kill:frag:2:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Airhead[m
+:kill:frag:6:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead was in the wrong place[m
+:kill:accident:6:6:type=10003:items=11
+[1;31m[BOT]Death has been vaporized by [BOT]Sensible[m
+:kill:frag:5:4:type=11:items=11:victimitems=11F
+[BOT]Death lost the [1;31mRED[m flag
+:ctf:dropped:14:4
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Discovery[m
+:kill:frag:2:1:type=11:items=11:victimitems=11
+[BOT]Sensible returned the [1;31mRED[m flag
+:ctf:return:5:5
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Discovery[m
+[1;31m[BOT]Discovery has 3 frags in a row[m
+:kill:frag:2:1:type=11:items=11:victimitems=11
+[BOT]Discovery made a [1;31mTRIPLE FRAG[m
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery was in the wrong place[m
+[1;31m[BOT]Discovery died with a 3 kill spree[m
+:kill:accident:2:2:type=10003:items=11
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=11:items=11:victimitems=11
+[BOT]Lion got the [1;34mBLUE[m flag
+:ctf:steal:14:3
+[1;31m[BOT]Discovery has been vaporized by [BOT]Lion[m
+:kill:frag:3:2:type=11:items=11F:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Lion[m
+:kill:frag:3:4:type=2059:items=11F:victimitems=11
+[1;31m[BOT]Thunderstorm was in the wrong place[m
+:kill:accident:1:1:type=10003:items=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Sensible[m
+:kill:frag:5:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead was in the wrong place[m
+:kill:accident:6:6:type=10003:items=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11:victimitems=11F
+[BOT]Lion lost the [1;34mBLUE[m flag
+:ctf:dropped:5:3
+[1;31m[BOT]Death has been vaporized by [BOT]Sensible[m
+:kill:frag:5:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:2:type=11:items=11:victimitems=11
+[BOT]Thunderstorm picked up the [1;34mBLUE[m flag
+:ctf:pickup:14:1
+[1;31m[BOT]Sensible has been vaporized by [BOT]Discovery[m
+:kill:frag:2:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:6:type=2059:items=11F:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+[1;31m[BOT]Thunderstorm has 3 frags in a row[m
+:kill:frag:1:4:type=11:items=11F:victimitems=11
+[BOT]Thunderstorm made a [1;31mTRIPLE FRAG[m
+[BOT]Thunderstorm captured the [1;34mBLUE[m flag in 17.75, failing to break [BOT]Death's record of 8.05 seconds
+:ctf:capture:14:1
+[1;31m[BOT]Discovery mows down a team mate[m
+:kill:tk:2:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Airhead[m
+:kill:frag:6:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Thunderstorm[m
+[1;31m[BOT]Thunderstorm has 4 frags in a row[m
+:kill:frag:1:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=2059:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Discovery[m
+[1;31m[BOT]Thunderstorm's 4 kill spree was ended by [BOT]Discovery[m
+:kill:frag:2:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead was in the wrong place[m
+:kill:accident:6:6:type=10003:items=11
+[BOT]Discovery got the [1;31mRED[m flag
+:ctf:steal:5:2
+[1;31m[BOT]Discovery has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:2:type=2059:items=11:victimitems=11F
+[BOT]Discovery lost the [1;31mRED[m flag
+:ctf:dropped:14:2
+[BOT]Death picked up the [1;31mRED[m flag
+:ctf:pickup:5:4
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=2059:items=11:victimitems=11F
+[BOT]Death lost the [1;31mRED[m flag
+:ctf:dropped:14:4
+[BOT]Thunderstorm returned the [1;31mRED[m flag
+:ctf:return:5:1
+[1;31m[BOT]Thunderstorm mows down a team mate[m
+:kill:tk:1:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion was in the wrong place[m
+:kill:accident:3:3:type=10003:items=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Discovery[m
+:kill:frag:2:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:2:type=2059:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Sensible[m
+:kill:frag:5:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Discovery[m
+:kill:frag:2:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+:kill:frag:4:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11:victimitems=11
+[BOT]Death got the [1;31mRED[m flag
+:ctf:steal:5:4
+[1;31m[BOT]Death has been vaporized by [BOT]Sensible[m
+:kill:frag:5:4:type=11:items=11:victimitems=11F
+[BOT]Death lost the [1;31mRED[m flag
+:ctf:dropped:14:4
+[1;31m[BOT]Airhead has been vaporized by [BOT]Sensible[m
+:kill:frag:5:6:type=11:items=11:victimitems=11
+[BOT]Sensible returned the [1;31mRED[m flag
+:ctf:return:5:5
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+:kill:frag:6:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Discovery[m
+:kill:frag:2:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+:kill:frag:4:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Lion[m
+:kill:frag:3:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Sensible[m
+:kill:frag:5:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Discovery[m
+[1;31m[BOT]Discovery has 3 frags in a row[m
+:kill:frag:2:5:type=11:items=11:victimitems=11
+[BOT]Discovery made a [1;31mTRIPLE FRAG[m
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Discovery[m
+[1;31m[BOT]Discovery has 4 frags in a row[m
+:kill:frag:2:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Lion[m
+[1;31m[BOT]Discovery's 4 kill spree was ended by [BOT]Lion[m
+:kill:frag:3:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Sensible[m
+:kill:frag:5:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+:kill:frag:4:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Discovery[m
+:kill:frag:2:3:type=11:items=11:victimitems=11
+[BOT]Discovery got the [1;31mRED[m flag
+:ctf:steal:5:2
+[1;31m[BOT]Sensible has been vaporized by [BOT]Airhead[m
+:kill:frag:6:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:2:type=2059:items=11:victimitems=11F
+[BOT]Discovery lost the [1;31mRED[m flag
+:ctf:dropped:14:2
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+:kill:frag:4:1:type=11:items=11:victimitems=11
+[BOT]Lion returned the [1;31mRED[m flag
+:ctf:return:5:3
+[1;31m[BOT]Airhead has been vaporized by [BOT]Sensible[m
+:kill:frag:5:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Discovery[m
+:kill:frag:2:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Death was in the wrong place[m
+:kill:accident:4:4:type=10003:items=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Sensible[m
+:kill:frag:5:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:2:type=11:items=11:victimitems=11
+[BOT]Death got the [1;31mRED[m flag
+:ctf:steal:5:4
+[BOT]Thunderstorm got the [1;34mBLUE[m flag
+:ctf:steal:14:1
+[1;31m[BOT]Discovery has been vaporized by [BOT]Sensible[m
+[1;31m[BOT]Sensible has 3 frags in a row[m
+:kill:frag:5:2:type=11:items=11:victimitems=11
+[BOT]Sensible made a [1;31mTRIPLE FRAG[m
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11F:victimitems=11
+[1;31m[BOT]Death was in the wrong place[m
+:kill:accident:4:4:type=10003:items=11F
+[BOT]Death lost the [1;31mRED[m flag
+:ctf:dropped:14:4
+The [1;31mRED[m flag has returned to base
+:ctf:returned:5
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Discovery[m
+:kill:frag:2:1:type=11:items=11:victimitems=11F
+[BOT]Thunderstorm lost the [1;34mBLUE[m flag
+:ctf:dropped:5:1
+[BOT]Discovery returned the [1;34mBLUE[m flag
+:ctf:return:14:2
+[1;31m[BOT]Death has been vaporized by [BOT]Lion[m
+:kill:frag:3:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+:kill:frag:4:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=2059:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+[1;31m[BOT]Death has 3 frags in a row[m
+:kill:frag:4:1:type=11:items=11:victimitems=11
+[BOT]Death made a [1;31mTRIPLE FRAG[m
+[BOT]Sensible got the [1;34mBLUE[m flag
+:ctf:steal:14:5
+[1;31m[BOT]Death was in the wrong place[m
+[1;31m[BOT]Death died with a 3 kill spree[m
+:kill:accident:4:4:type=10003:items=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Discovery[m
+[1;31m[BOT]Sensible's 3 kill spree was ended by [BOT]Discovery[m
+:kill:frag:2:5:type=11:items=11:victimitems=11F
+[BOT]Sensible lost the [1;34mBLUE[m flag
+:ctf:dropped:5:5
+[BOT]Airhead returned the [1;34mBLUE[m flag
+:ctf:return:14:6
+[1;31m[BOT]Airhead has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Lion[m
+:kill:frag:3:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+:kill:frag:6:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Airhead[m
+:kill:frag:6:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Lion[m
+:kill:frag:3:6:type=11:items=11:victimitems=11
+[BOT]Death got the [1;31mRED[m flag
+:ctf:steal:5:4
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11F:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=11:items=11F:victimitems=11
+[BOT]Death captured the [1;31mRED[m flag in 7.15, breaking his previous record of 8.05 seconds
+:recordset:4:7.149994
+:ctf:capture:5:4
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+[1;31m[BOT]Death has 3 frags in a row[m
+:kill:frag:4:1:type=11:items=11:victimitems=11
+[BOT]Death made a [1;31mTRIPLE FRAG[m
+[BOT]Airhead got the [1;31mRED[m flag
+:ctf:steal:5:6
+[1;31m[BOT]Sensible has been vaporized by [BOT]Airhead[m
+:kill:frag:6:5:type=11:items=11F:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:6:type=11:items=11:victimitems=11F
+[BOT]Airhead lost the [1;31mRED[m flag
+:ctf:dropped:14:6
+[BOT]Thunderstorm returned the [1;31mRED[m flag
+:ctf:return:5:1
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+[1;31m[BOT]Death's 3 kill spree was ended by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Thunderstorm[m
+[1;31m[BOT]Thunderstorm has 3 frags in a row[m
+:kill:frag:1:2:type=11:items=11:victimitems=11
+[BOT]Thunderstorm made a [1;31mTRIPLE FRAG[m
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+[1;31m[BOT]Thunderstorm's 3 kill spree was ended by [BOT]Death[m
+:kill:frag:4:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible was in the wrong place[m
+:kill:accident:5:5:type=10003:items=11
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Discovery[m
+:kill:frag:2:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Sensible[m
+:kill:frag:5:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Thunderstorm[m
+[1;31m[BOT]Thunderstorm has 3 frags in a row[m
+:kill:frag:1:6:type=11:items=11:victimitems=11
+[BOT]Thunderstorm made a [1;31mTRIPLE FRAG[m
+[BOT]Sensible got the [1;34mBLUE[m flag
+:ctf:steal:14:5
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=11:items=11:victimitems=11F
+[BOT]Sensible lost the [1;34mBLUE[m flag
+:ctf:dropped:5:5
+[1;31m[BOT]Lion was in the wrong place[m
+:kill:accident:3:3:type=10003:items=11
+[BOT]Discovery returned the [1;34mBLUE[m flag
+:ctf:return:14:2
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Discovery[m
+[1;31m[BOT]Thunderstorm's 3 kill spree was ended by [BOT]Discovery[m
+:kill:frag:2:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead was in the wrong place[m
+:kill:accident:6:6:type=10003:items=11
+LHNET_Write: sendto returned error: Operation not permitted
+LHNET_Write: sendto returned error: Operation not permitted
+[BOT]Lion got the [1;34mBLUE[m flag
+:ctf:steal:14:3
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=11:items=11:victimitems=11
+LHNET_Write: sendto returned error: Operation not permitted
+LHNET_Write: sendto returned error: Operation not permitted
+[1;31m[BOT]Discovery has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11:victimitems=11F
+[BOT]Lion lost the [1;34mBLUE[m flag
+:ctf:dropped:5:3
+LHNET_Write: sendto returned error: Operation not permitted
+LHNET_Write: sendto returned error: Operation not permitted
+LHNET_Write: sendto returned error: Operation not permitted
+[1;31m[BOT]Discovery mows down a team mate[m
+:kill:tk:2:6:type=11:items=11:victimitems=11
+LHNET_Write: sendto returned error: Operation not permitted
+[BOT]Death returned the [1;34mBLUE[m flag
+:ctf:return:14:4
+LHNET_Write: sendto returned error: Operation not permitted
+LHNET_Write: sendto returned error: Operation not permitted
+[1;31m[BOT]Discovery has been vaporized by [BOT]Lion[m
+:kill:frag:3:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead was in the wrong place[m
+:kill:accident:6:6:type=10003:items=11
+[1;31m[BOT]Death has been vaporized by [BOT]Lion[m
+:kill:frag:3:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+:kill:frag:6:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Discovery[m
+:kill:frag:2:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+:kill:frag:6:1:type=11:items=11:victimitems=11
+[BOT]Discovery got the [1;31mRED[m flag
+:ctf:steal:5:2
+[1;31m[BOT]Lion has been vaporized by [BOT]Airhead[m
+[1;31m[BOT]Airhead has 3 frags in a row[m
+:kill:frag:6:3:type=11:items=11:victimitems=11
+[BOT]Airhead made a [1;31mTRIPLE FRAG[m
+[1;31m[BOT]Discovery has been vaporized by [BOT]Sensible[m
+:kill:frag:5:2:type=11:items=11:victimitems=11F
+[BOT]Discovery lost the [1;31mRED[m flag
+:ctf:dropped:14:2
+[1;31m[BOT]Airhead was in the wrong place[m
+[1;31m[BOT]Airhead died with a 3 kill spree[m
+:kill:accident:6:6:type=10003:items=11
+[BOT]Thunderstorm returned the [1;31mRED[m flag
+:ctf:return:5:1
+[BOT]Death got the [1;31mRED[m flag
+:ctf:steal:5:4
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+:kill:frag:4:1:type=11:items=11F:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Airhead[m
+:kill:frag:6:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Airhead[m
+:kill:frag:6:5:type=2059:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=11:items=11:victimitems=11F
+[BOT]Death lost the [1;31mRED[m flag
+:ctf:dropped:14:4
+[BOT]Discovery picked up the [1;31mRED[m flag
+:ctf:pickup:5:2
+[1;31m[BOT]Lion has been vaporized by [BOT]Discovery[m
+:kill:frag:2:3:type=11:items=11F:victimitems=11
+[1;31m[BOT]Sensible was in the wrong place[m
+:kill:accident:5:5:type=10003:items=11
+[1;31m[BOT]Death has been vaporized by [BOT]Lion[m
+:kill:frag:3:4:type=2059:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+[1;31m[BOT]Airhead has 3 frags in a row[m
+:kill:frag:6:1:type=11:items=11:victimitems=11
+[BOT]Airhead made a [1;31mTRIPLE FRAG[m
+[BOT]Discovery captured the [1;31mRED[m flag in 10.75, failing to break [BOT]Death's record of 7.15 seconds
+:ctf:capture:5:2
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Airhead[m
+[1;31m[BOT]Airhead has 4 frags in a row[m
+:kill:frag:6:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Discovery[m
+:kill:frag:2:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Lion[m
+:kill:frag:3:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11:victimitems=11
+[BOT]Airhead got the [1;31mRED[m flag
+:ctf:steal:5:6
+[1;31m[BOT]Airhead has been vaporized by [BOT]Thunderstorm[m
+[1;31m[BOT]Airhead's 4 kill spree was ended by [BOT]Thunderstorm[m
+:kill:frag:1:6:type=11:items=11:victimitems=11F
+[BOT]Airhead lost the [1;31mRED[m flag
+:ctf:dropped:14:6
+[BOT]Thunderstorm returned the [1;31mRED[m flag
+:ctf:return:5:1
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Discovery[m
+[1;31m[BOT]Discovery has 3 frags in a row[m
+:kill:frag:2:1:type=11:items=11:victimitems=11
+[BOT]Discovery made a [1;31mTRIPLE FRAG[m
+[1;31m[BOT]Sensible mows down a team mate[m
+:kill:tk:5:3:type=2059:items=11:victimitems=11
+[BOT]Airhead got the [1;31mRED[m flag
+:ctf:steal:5:6
+[1;31m[BOT]Death has been vaporized by [BOT]Lion[m
+:kill:frag:3:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery was in the wrong place[m
+[1;31m[BOT]Discovery died with a 3 kill spree[m
+:kill:accident:2:2:type=10003:items=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Sensible[m
+:kill:frag:5:6:type=11:items=11:victimitems=11F
+[BOT]Airhead lost the [1;31mRED[m flag
+:ctf:dropped:14:6
+[BOT]Sensible returned the [1;31mRED[m flag
+:ctf:return:5:5
+[1;31m[BOT]Death has been vaporized by [BOT]Lion[m
+:kill:frag:3:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:2:type=2059:items=11:victimitems=11
+[BOT]Thunderstorm got the [1;34mBLUE[m flag
+:ctf:steal:14:1
+[1;31m[BOT]Lion has been vaporized by [BOT]Airhead[m
+:kill:frag:6:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+:kill:frag:6:1:type=11:items=11:victimitems=11F
+[BOT]Thunderstorm lost the [1;34mBLUE[m flag
+:ctf:dropped:5:1
+[BOT]Airhead returned the [1;34mBLUE[m flag
+:ctf:return:14:6
+[1;31m[BOT]Sensible was in the wrong place[m
+:kill:accident:5:5:type=10003:items=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+:kill:frag:4:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion was in the wrong place[m
+:kill:accident:3:3:type=10003:items=11
+[1;31m[BOT]Death has been vaporized by [BOT]Sensible[m
+:kill:frag:5:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Discovery[m
+:kill:frag:2:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+:kill:frag:6:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion was in the wrong place[m
+:kill:accident:3:3:type=10003:items=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+:kill:frag:6:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Discovery[m
+:kill:frag:2:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Sensible[m
+:kill:frag:5:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Sensible[m
+:kill:frag:5:6:type=2059:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+:kill:frag:4:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Discovery[m
+[1;31m[BOT]Discovery has 3 frags in a row[m
+:kill:frag:2:3:type=11:items=11:victimitems=11
+[BOT]Discovery made a [1;31mTRIPLE FRAG[m
+[1;31m[BOT]Sensible has been vaporized by [BOT]Airhead[m
+:kill:frag:6:5:type=2059:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Sensible[m
+:kill:frag:5:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+:kill:frag:6:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Lion[m
+[1;31m[BOT]Discovery's 3 kill spree was ended by [BOT]Lion[m
+:kill:frag:3:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead was in the wrong place[m
+:kill:accident:6:6:type=10003:items=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Discovery[m
+:kill:frag:2:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+:kill:frag:6:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery was in the wrong place[m
+:kill:accident:2:2:type=10003:items=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+[1;31m[BOT]Death has 3 frags in a row[m
+:kill:frag:4:1:type=11:items=11:victimitems=11
+[BOT]Death made a [1;31mTRIPLE FRAG[m
+[1;31m[BOT]Death was in the wrong place[m
+[1;31m[BOT]Death died with a 3 kill spree[m
+:kill:accident:4:4:type=10003:items=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Discovery[m
+:kill:frag:2:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Lion[m
+:kill:frag:3:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Sensible[m
+:kill:frag:5:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Airhead[m
+:kill:frag:6:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Sensible[m
+:kill:frag:5:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Discovery[m
+:kill:frag:2:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+[1;31m[BOT]Death has 3 frags in a row[m
+:kill:frag:4:5:type=11:items=11:victimitems=11
+[BOT]Death made a [1;31mTRIPLE FRAG[m
+[1;31m[BOT]Thunderstorm was in the wrong place[m
+:kill:accident:1:1:type=10003:items=11
+[1;31m[BOT]Death was in the wrong place[m
+[1;31m[BOT]Death died with a 3 kill spree[m
+:kill:accident:4:4:type=10003:items=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Airhead[m
+:kill:frag:6:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+:kill:frag:4:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Airhead[m
+[1;31m[BOT]Airhead has 3 frags in a row[m
+:kill:frag:6:5:type=11:items=11:victimitems=11
+[BOT]Airhead made a [1;31mTRIPLE FRAG[m
+[BOT]Discovery got the [1;31mRED[m flag
+:ctf:steal:5:2
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+[1;31m[BOT]Death has 3 frags in a row[m
+:kill:frag:4:3:type=11:items=11:victimitems=11
+[BOT]Death made a [1;31mTRIPLE FRAG[m
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+[1;31m[BOT]Death's 3 kill spree was ended by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery was in the wrong place[m
+:kill:accident:2:2:type=10003:items=11F
+[BOT]Discovery lost the [1;31mRED[m flag
+:ctf:dropped:14:2
+The [1;31mRED[m flag has returned to base
+:ctf:returned:5
+[1;31m[BOT]Airhead was in the wrong place[m
+[1;31m[BOT]Airhead died with a 3 kill spree[m
+:kill:accident:6:6:type=10003:items=11
+[1;31m[BOT]Sensible was in the wrong place[m
+:kill:accident:5:5:type=10003:items=11
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Discovery[m
+:kill:frag:2:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Airhead[m
+:kill:frag:6:3:type=2059:items=11:victimitems=11
+[1;31m[BOT]Discovery was in the wrong place[m
+:kill:accident:2:2:type=10003:items=11
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Lion[m
+:kill:frag:3:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+:kill:frag:6:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+[1;31m[BOT]Death has 3 frags in a row[m
+:kill:frag:4:3:type=11:items=11:victimitems=11
+[BOT]Death made a [1;31mTRIPLE FRAG[m
+[BOT]Death got the [1;31mRED[m flag
+:ctf:steal:5:4
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+:kill:frag:6:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Sensible[m
+:kill:frag:5:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Discovery[m
+:kill:frag:2:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+[1;31m[BOT]Death's 3 kill spree was ended by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=11:items=11:victimitems=11F
+[BOT]Death lost the [1;31mRED[m flag
+:ctf:dropped:14:4
+[1;31m[BOT]Discovery has been vaporized by [BOT]Lion[m
+:kill:frag:3:2:type=11:items=11:victimitems=11
+[BOT]Thunderstorm returned the [1;31mRED[m flag
+:ctf:return:5:1
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Discovery[m
+:kill:frag:2:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Lion[m
+:kill:frag:3:6:type=2059:items=11:victimitems=11
+[BOT]Death got the [1;31mRED[m flag
+:ctf:steal:5:4
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=11:items=11:victimitems=11F
+[BOT]Death lost the [1;31mRED[m flag
+:ctf:dropped:14:4
+[1;31m[BOT]Discovery has been vaporized by [BOT]Sensible[m
+:kill:frag:5:2:type=11:items=11:victimitems=11
+[BOT]Sensible returned the [1;31mRED[m flag
+:ctf:return:5:5
+[1;31m[BOT]Airhead has been vaporized by [BOT]Sensible[m
+:kill:frag:5:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Discovery[m
+:kill:frag:2:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Discovery[m
+:kill:frag:2:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Discovery[m
+[1;31m[BOT]Discovery has 3 frags in a row[m
+:kill:frag:2:3:type=11:items=11:victimitems=11
+[BOT]Discovery made a [1;31mTRIPLE FRAG[m
+[BOT]Discovery got the [1;31mRED[m flag
+:ctf:steal:5:2
+[1;31m[BOT]Discovery has been vaporized by [BOT]Thunderstorm[m
+[1;31m[BOT]Discovery's 3 kill spree was ended by [BOT]Thunderstorm[m
+:kill:frag:1:2:type=11:items=11:victimitems=11F
+[BOT]Discovery lost the [1;31mRED[m flag
+:ctf:dropped:14:2
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=11:items=11:victimitems=11
+[BOT]Thunderstorm returned the [1;31mRED[m flag
+:ctf:return:5:1
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+:kill:frag:6:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Airhead[m
+:kill:frag:6:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Death was in the wrong place[m
+:kill:accident:4:4:type=10003:items=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11:victimitems=11
+[BOT]Sensible got the [1;34mBLUE[m flag
+:ctf:steal:14:5
+[1;31m[BOT]Sensible was in the wrong place[m
+:kill:accident:5:5:type=10003:items=11F
+[BOT]Sensible lost the [1;34mBLUE[m flag
+:ctf:dropped:5:5
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+[1;31m[BOT]Airhead has 3 frags in a row[m
+:kill:frag:6:1:type=11:items=11:victimitems=11
+[BOT]Airhead made a [1;31mTRIPLE FRAG[m
+The [1;34mBLUE[m flag has returned to base
+:ctf:returned:14
+[1;31m[BOT]Discovery has been vaporized by [BOT]Sensible[m
+:kill:frag:5:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+[1;31m[BOT]Death has 3 frags in a row[m
+:kill:frag:4:5:type=11:items=11:victimitems=11
+[BOT]Death made a [1;31mTRIPLE FRAG[m
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+[1;31m[BOT]Death's 3 kill spree was ended by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:2:type=11:items=11:victimitems=11
+[BOT]Thunderstorm got the [1;34mBLUE[m flag
+:ctf:steal:14:1
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+[1;31m[BOT]Thunderstorm has 3 frags in a row[m
+:kill:frag:1:4:type=11:items=11F:victimitems=11
+[BOT]Thunderstorm made a [1;31mTRIPLE FRAG[m
+[1;31m[BOT]Discovery has been vaporized by [BOT]Lion[m
+:kill:frag:3:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Sensible[m
+[1;31m[BOT]Airhead's 3 kill spree was ended by [BOT]Sensible[m
+:kill:frag:5:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Sensible[m
+:kill:frag:5:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Death was in the wrong place[m
+:kill:accident:4:4:type=10003:items=11
+[1;31m[BOT]Lion was in the wrong place[m
+:kill:accident:3:3:type=10003:items=11
+[BOT]Thunderstorm captured the [1;34mBLUE[m flag in 10.50, failing to break [BOT]Death's record of 7.15 seconds
+:ctf:capture:14:1
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Lion[m
+:kill:frag:3:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+[1;31m[BOT]Thunderstorm's 3 kill spree was ended by [BOT]Death[m
+:kill:frag:4:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Discovery[m
+:kill:frag:2:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion was in the wrong place[m
+:kill:accident:3:3:type=10003:items=11
+[1;31m[BOT]Airhead was in the wrong place[m
+:kill:accident:6:6:type=10003:items=11
+[BOT]Discovery got the [1;31mRED[m flag
+:ctf:steal:5:2
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+[1;31m[BOT]Death has 3 frags in a row[m
+:kill:frag:4:1:type=11:items=11:victimitems=11
+[BOT]Death made a [1;31mTRIPLE FRAG[m
+[1;31m[BOT]Death was in the wrong place[m
+[1;31m[BOT]Death died with a 3 kill spree[m
+:kill:accident:4:4:type=10003:items=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Airhead[m
+:kill:frag:6:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:2:type=11:items=11:victimitems=11F
+[BOT]Discovery lost the [1;31mRED[m flag
+:ctf:dropped:14:2
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Airhead[m
+:kill:frag:6:1:type=11:items=11:victimitems=11
+[BOT]Sensible returned the [1;31mRED[m flag
+:ctf:return:5:5
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+:kill:frag:4:5:type=2059:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Death[m
+:kill:frag:4:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:6:type=11:items=11:victimitems=11
+[BOT]Thunderstorm got the [1;34mBLUE[m flag
+:ctf:steal:14:1
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+[1;31m[BOT]Death has 3 frags in a row[m
+:kill:frag:4:1:type=11:items=11:victimitems=11F
+[BOT]Death made a [1;31mTRIPLE FRAG[m
+[BOT]Thunderstorm lost the [1;34mBLUE[m flag
+:ctf:dropped:5:1
+[BOT]Sensible picked up the [1;34mBLUE[m flag
+:ctf:pickup:14:5
+[1;31m[BOT]Sensible has been vaporized by [BOT]Death[m
+[1;31m[BOT]Death has 4 frags in a row[m
+:kill:frag:4:5:type=11:items=11:victimitems=11F
+[BOT]Sensible lost the [1;34mBLUE[m flag
+:ctf:dropped:5:5
+[1;31m[BOT]Airhead was in the wrong place[m
+:kill:accident:6:6:type=10003:items=11
+[1;31m[BOT]Death was in the wrong place[m
+[1;31m[BOT]Death died with a 4 kill spree[m
+:kill:accident:4:4:type=10003:items=11
+[BOT]Discovery returned the [1;34mBLUE[m flag
+:ctf:return:14:2
+[1;31m[BOT]Lion has been vaporized by [BOT]Airhead[m
+:kill:frag:6:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Lion has been vaporized by [BOT]Discovery[m
+:kill:frag:2:3:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead was in the wrong place[m
+:kill:accident:6:6:type=10003:items=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Death[m
+:kill:frag:4:1:type=11:items=11:victimitems=11
+[BOT]Death got the [1;31mRED[m flag
+:ctf:steal:5:4
+[1;31m[BOT]Sensible has been vaporized by [BOT]Airhead[m
+:kill:frag:6:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Lion[m
+:kill:frag:3:4:type=11:items=11:victimitems=11F
+[BOT]Death lost the [1;31mRED[m flag
+:ctf:dropped:14:4
+[BOT]Thunderstorm returned the [1;31mRED[m flag
+:ctf:return:5:1
+[BOT]Airhead got the [1;31mRED[m flag
+:ctf:steal:5:6
+[1;31m[BOT]Airhead has been vaporized by [BOT]Lion[m
+:kill:frag:3:6:type=2059:items=11:victimitems=11F
+[BOT]Airhead lost the [1;31mRED[m flag
+:ctf:dropped:14:6
+[BOT]Sensible returned the [1;31mRED[m flag
+:ctf:return:5:5
+[BOT]Lion got the [1;34mBLUE[m flag
+:ctf:steal:14:3
+[1;31m[BOT]Airhead has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:6:type=11:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Sensible[m
+:kill:frag:5:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Discovery[m
+:kill:frag:2:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Discovery has been vaporized by [BOT]Lion[m
+[1;31m[BOT]Lion has 3 frags in a row[m
+:kill:frag:3:2:type=11:items=11F:victimitems=11
+[BOT]Lion made a [1;31mTRIPLE FRAG[m
+[1;31m[BOT]Sensible was in the wrong place[m
+:kill:accident:5:5:type=10003:items=11
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Airhead has been vaporized by [BOT]Lion[m
+[1;31m[BOT]Lion has 4 frags in a row[m
+:kill:frag:3:6:type=11:items=11F:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Discovery[m
+:kill:frag:2:5:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Discovery[m
+:kill:frag:2:1:type=11:items=11:victimitems=11
+[BOT]Lion captured the [1;34mBLUE[m flag in 13.00, failing to break [BOT]Death's record of 7.15 seconds
+:ctf:capture:14:3
+[1;31m[BOT]Airhead has been vaporized by [BOT]Lion[m
+[1;31m[BOT]Lion has 5 frags in a row[m
+:kill:frag:3:6:type=11:items=11:victimitems=11
+[BOT]Lion unleashes [1;31mRAGE[m
+[1;31m[BOT]Sensible has been vaporized by [BOT]Discovery[m
+[1;31m[BOT]Discovery has 3 frags in a row[m
+:kill:frag:2:5:type=11:items=11:victimitems=11
+[BOT]Discovery made a [1;31mTRIPLE FRAG[m
+[1;31m[BOT]Discovery has been vaporized by [BOT]Lion[m
+[1;31m[BOT]Discovery's 3 kill spree was ended by [BOT]Lion[m
+[1;31m[BOT]Lion has 6 frags in a row[m
+:kill:frag:3:2:type=11:items=11:victimitems=11
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Airhead[m
+:kill:frag:6:5:type=11:items=11:victimitems=11
+[BOT]Lion got the [1;34mBLUE[m flag
+:ctf:steal:14:3
+[1;31m[BOT]Death has been vaporized by [BOT]Thunderstorm[m
+:kill:frag:1:4:type=11:items=11:victimitems=11
+[1;31m[BOT]Thunderstorm has been vaporized by [BOT]Discovery[m
+:kill:frag:2:1:type=11:items=11:victimitems=11
+[1;31m[BOT]Sensible has been vaporized by [BOT]Discovery[m
+:kill:frag:2:5:type=11:items=11:victimitems=11

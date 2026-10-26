@@ -1,0 +1,47 @@
+2026-10-26T04:15:44.821Z listen bind=127.0.0.1 port=26003 server=127.0.0.1:26099 max_sessions=64 idle_timeout=120 max_pps=300 stun=stun:stun.l.google.com:19302 ice_ports=26100-26299 origins=https://nosuchmachine.net,http://127.0.0.1:26180
+2026-10-26T04:16:00.351Z signal signum=terminated
+2026-10-26T04:16:00.351Z shutdown sessions=0
+2026-10-26T04:16:47.912Z listen bind=127.0.0.1 port=26003 server=127.0.0.1:26099 max_sessions=64 idle_timeout=120 max_pps=300 stun=stun:stun.l.google.com:19302 ice_ports=26100-26299 origins=https://nosuchmachine.net,file://
+2026-10-26T04:16:53.629Z reject_origin peer=127.0.0.1:49232 origin=null
+2026-10-26T04:16:53.685Z signal signum=terminated
+2026-10-26T04:16:53.686Z shutdown sessions=0
+2026-10-26T04:17:07.101Z listen bind=127.0.0.1 port=26003 server=127.0.0.1:26099 max_sessions=64 idle_timeout=120 max_pps=300 stun=stun:stun.l.google.com:19302 ice_ports=26100-26299 origins=https://nosuchmachine.net,null
+2026-10-26T04:17:09.278Z session_open session=1 peer=127.0.0.1:58762 origin=null path=/rtc subprotocol=-
+2026-10-26T04:17:09.306Z pc_state session=1 state=connecting
+2026-10-26T04:17:29.318Z signal signum=terminated
+2026-10-26T04:17:29.320Z shutdown sessions=1
+2026-10-26T04:17:29.321Z session_close session=1 peer=127.0.0.1:58762 reason=shutdown seconds=20.0 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:27:35.867Z listen bind=127.0.0.1 port=26003 server=127.0.0.1:26099 max_sessions=64 idle_timeout=120 max_pps=300 stun=stun:stun.l.google.com:19302 ice_ports=26100-26299 origins=https://nosuchmachine.net,null
+2026-10-26T04:27:39.202Z session_open session=1 peer=127.0.0.1:56912 origin=null path=/rtc subprotocol=-
+2026-10-26T04:27:39.219Z pc_state session=1 state=connecting
+2026-10-26T04:27:54.221Z session_close session=1 peer=127.0.0.1:56912 reason=eof seconds=15.0 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:27:54.221Z pc_state session=1 state=closed
+2026-10-26T04:28:54.295Z session_open session=2 peer=127.0.0.1:52742 origin=null path=/rtc subprotocol=-
+2026-10-26T04:28:54.334Z pc_state session=2 state=connecting
+2026-10-26T04:29:09.309Z session_close session=2 peer=127.0.0.1:52742 reason=eof seconds=15.0 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:29:09.309Z pc_state session=2 state=closed
+2026-10-26T04:29:09.315Z reject_origin peer=127.0.0.1:32876 origin=https://evil.example
+2026-10-26T04:29:09.317Z upgrade_failed peer=127.0.0.1:32890 error=websocket.HandshakeError
+2026-10-26T04:29:09.319Z upgrade_failed peer=127.0.0.1:32900 error=websocket.HandshakeError
+2026-10-26T04:29:09.320Z upgrade_failed peer=127.0.0.1:32906 error=websocket.HandshakeError
+2026-10-26T04:31:50.800Z signal signum=terminated
+2026-10-26T04:31:50.800Z shutdown sessions=0
+2026-10-26T04:33:27.163Z listen bind=127.0.0.1 port=26003 server=127.0.0.1:26099 max_sessions=64 idle_timeout=120 max_pps=300 stun=stun:stun.l.google.com:19302 ice_ports=26100-26299 origins=https://nosuchmachine.net,null
+2026-10-26T04:36:58.701Z listen bind=127.0.0.1 port=26003 server=127.0.0.1:26099 max_sessions=64 idle_timeout=120 max_pps=300 stun=stun:stun.l.google.com:19302 ice_ports=26100-26299 origins=https://nosuchmachine.net,null
+2026-10-26T04:37:03.687Z session_open session=1 peer=127.0.0.1:51532 origin=null path=/rtc subprotocol=-
+2026-10-26T04:37:03.730Z pc_state session=1 state=connecting
+2026-10-26T04:37:18.740Z session_close session=1 peer=127.0.0.1:51532 reason=eof seconds=15.1 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:37:18.740Z pc_state session=1 state=closed
+2026-10-26T04:37:21.881Z session_open session=2 peer=127.0.0.1:44884 origin=null path=/rtc subprotocol=-
+2026-10-26T04:37:21.888Z pc_state session=2 state=connecting
+2026-10-26T04:37:36.908Z session_close session=2 peer=127.0.0.1:44884 reason=eof seconds=15.0 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:37:36.908Z pc_state session=2 state=closed
+2026-10-26T04:37:36.958Z reject_origin peer=127.0.0.1:49628 origin=https://evil.example
+2026-10-26T04:37:36.960Z session_open session=3 peer=127.0.0.1:49640 origin=- path=/rtc subprotocol=-
+2026-10-26T04:37:36.961Z session_close session=3 peer=127.0.0.1:49640 reason=eof seconds=0.0 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:37:36.962Z session_open session=4 peer=127.0.0.1:49646 origin=https://nosuchmachine.net path=/rtc subprotocol=-
+2026-10-26T04:37:36.963Z session_open session=5 peer=127.0.0.1:49652 origin=https://nosuchmachine.net path=/some/other/path subprotocol=-
+2026-10-26T04:37:36.963Z session_close session=4 peer=127.0.0.1:49646 reason=eof seconds=0.0 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:37:36.964Z session_close session=5 peer=127.0.0.1:49652 reason=eof seconds=0.0 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:39:56.142Z signal signum=terminated
+2026-10-26T04:39:56.142Z shutdown sessions=0

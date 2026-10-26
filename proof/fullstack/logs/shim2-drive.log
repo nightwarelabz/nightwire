@@ -1,0 +1,12 @@
+[+4.7s] chromium up: Chrome/152.0.7977.82
+[+6.4s] page loaded, clicking play
+[+74.6s] con[0] plateHidden=undefined status="data/data20091001.pk3 is kept on this machine — no download." tail: 
+[+83.5s] ENGINE STARTED (plate hidden) at +77.1s after click
+[+83.5s] con[2434] plateHidden=true status="data/data20091001.pk3 is kept on this machine — no download." tail:   : 0x8010 |     Frequency : 44100 |     Samples   : 1024 | Sound format: 44100Hz, 2 channels, 16 bits per sample | CD Audio Initialized | menu: program loaded (crc 16167, size 603K) | Looks like you are rendering without using requestAnimationFrame for the main loop. You should use 0 for the frame rate in emscripten_set_main_loop in order to use requestAnimationFrame, as that can greatly improve your frame rates! | 
+[+92.4s] con[2755] plateHidden=true status="data/data20091001.pk3 is kept on this machine — no download." tail: p in order to use requestAnimationFrame, as that can greatly improve your frame rates! | [1;31mConnect: failed, no reply from 127.0.0.1:26000[m | [1;33mmenu VM warning: Attempted division of 0.000000 by zero[m | [1;33mmenu VM warning: Attempted division of 0.000000 by zero[m | [1;33mmenu VM warning: Attempted division of 0.000000 by zero[m | [1;33mmenu VM warning: Attempted division of 0.000000 by zero[m | 
+[+107.3s] SHOT shim2-world.png
+[+118.0s] SHOT shim2-world.png
+[+127.1s] SHOT shim2-world.png
+[+243.8s] SHOT shim2-final.png
+[+248.7s] SHOT shim2-console.png
+[+248.7s] DONE startedAt=+77.1s sawConnect=no conBytes=2755

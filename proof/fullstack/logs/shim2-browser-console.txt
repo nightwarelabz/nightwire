@@ -1,0 +1,79 @@
+Downloading /nexuiz/sparta-menu.pk3 to data/sparta-menu.pk3
+Downloading /nexuiz/autoexec.cfg to data/autoexec.cfg
+Downloaded data/autoexec.cfg
+Verified data/common-spog.pk3 from this machine's own storage — no download.
+Downloaded data/sparta-menu.pk3
+Verified data/data20091001.pk3 from this machine's own storage — no download.
+DarkPlaces Browser d93f9c4~ Oct 25 2026 release Clang 
+[1;33mBase gamedir "id1" empty or not found![m
+Game is DarkPlaces-Quake using gamedirs [0;1mid1 [mdata
+gamename for server filtering: DarkPlaces-Quake
+Playing shareware version, with modification.
+warning: most mods require full quake data.
+Skeletal animation uses generic code path (SSE not compiled in)
+Initializing client
+Linked against SDL version 2.32.10
+Using SDL library version 2.32.10
+Client using an automatically assigned port
+Client opened a socket on address 0.0.0.0:0
+execing quake.rc
+execing default.cfg
+execing defaultNexuiz.cfg
+[1;33mvid_bitsperpixel is read-only[m
+execing physics26.cfg
+execing ctfscoring-div0.cfg
+execing balance.cfg
+execing effects-normal.cfg
+execing turrets.cfg
+execing unit_machinegun.cfg
+execing unit_hk.cfg
+execing unit_hellion.cfg
+execing unit_mlrs.cfg
+execing unit_flac.cfg
+execing unit_fusreac.cfg
+execing unit_plasma.cfg
+execing unit_plasma2.cfg
+execing unit_tesla.cfg
+execing unit_phaser.cfg
+execing unit_walker.cfg
+execing unit_ewheel.cfg
+[1;33mcouldn't exec unit_repulsor.cfg[m
+execing default25.cfg
+execing physics25.cfg
+execing balance25.cfg
+[1;33mcouldn't exec config.cfg[m
+[1;33mcouldn't exec data/campaign.cfg[m
+execing config_update.cfg
+execing autoexec.cfg
+execing effects-normal.cfg
+menu: program is not loaded
+[1;33mCvar_Get: name is a command[m
+emscripten_set_main_loop_timing: Cannot set timing mode for main loop since a main loop does not exist! Call emscripten_set_main_loop first to set one up.
+GL_VENDOR: WebKit
+GL_RENDERER: WebKit WebGL
+GL_VERSION: OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium))
+Detected GLSL version 100
+Using GLES2 rendering path
+Display 0: 0
+Video Mode: desktop fullscreen 800x600 24bpp on display 0
+OpenGL backend started
+S_Startup: initializing sound output format: 48000Hz, 2 bit, 2 channels...
+Wanted audio Specification:
+    Channels  : 2
+    Format    : 0x8010
+    Frequency : 48000
+    Samples   : 1024
+Obtained audio specification:
+    Channels  : 2
+    Format    : 0x8010
+    Frequency : 44100
+    Samples   : 1024
+Sound format: 44100Hz, 2 channels, 16 bits per sample
+CD Audio Initialized
+menu: program loaded (crc 16167, size 603K)
+Looks like you are rendering without using requestAnimationFrame for the main loop. You should use 0 for the frame rate in emscripten_set_main_loop in order to use requestAnimationFrame, as that can greatly improve your frame rates!
+[1;31mConnect: failed, no reply from 127.0.0.1:26000[m
+[1;33mmenu VM warning: Attempted division of 0.000000 by zero[m
+[1;33mmenu VM warning: Attempted division of 0.000000 by zero[m
+[1;33mmenu VM warning: Attempted division of 0.000000 by zero[m
+[1;33mmenu VM warning: Attempted division of 0.000000 by zero[m

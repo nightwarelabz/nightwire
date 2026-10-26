@@ -1,0 +1,386 @@
+2026-10-26T04:36:58.701Z listen bind=127.0.0.1 port=26003 server=127.0.0.1:26099 max_sessions=64 idle_timeout=120 max_pps=300 stun=stun:stun.l.google.com:19302 ice_ports=26100-26299 origins=https://nosuchmachine.net,null
+2026-10-26T04:37:03.687Z session_open session=1 peer=127.0.0.1:51532 origin=null path=/rtc subprotocol=-
+pc INFO: 2026/10/26 04:37:03 signaling state changed to have-remote-offer
+pc INFO: 2026/10/26 04:37:03 signaling state changed to stable
+ice DEBUG: 04:37:03.730367 agent.go:647: Started agent: isControlling? false, remoteUfrag: "ksX/", remotePwd: "os4J7B5I4RoDGPIHOB/mp0oU"
+ice INFO: 2026/10/26 04:37:03 Setting new connection state: Checking
+pc INFO: 2026/10/26 04:37:03 ICE connection state changed: checking
+pc INFO: 2026/10/26 04:37:03 peer connection state changed: connecting
+2026-10-26T04:37:03.730Z pc_state session=1 state=connecting
+ice WARNING: 2026/10/26 04:37:03 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:03 Failed to ping without candidate pairs. Connection is not possible yet.
+ice DEBUG: 04:37:03.731852 gather.go:894: Failed to resolve STUN host: udp6 stun.l.google.com:19302: lookup stun.l.google.com on 198.19.0.1:53: no such host
+ice WARNING: 2026/10/26 04:37:03 Failed to ping without candidate pairs. Connection is not possible yet.
+mdns DEBUG: 04:37:03.733073 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:03 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:03.733227 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:03 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:03.733359 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:03 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:03.733381 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:03 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:03.733582 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:03 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+ice WARNING: 2026/10/26 04:37:03 failed to get server reflexive address udp4 stun:stun.l.google.com:19302: write udp4 0.0.0.0:26158->198.18.2.11:19302: sendto: operation not permitted
+mdns DEBUG: 04:37:03.734058 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:03 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:03.734236 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:03 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:03.734803 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:03 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+ice WARNING: 2026/10/26 04:37:03 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:04 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:04 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:04 Failed to ping without candidate pairs. Connection is not possible yet.
+mdns DEBUG: 04:37:04.733503 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:04 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:04.733698 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns DEBUG: 04:37:04.733503 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:04 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns WARNING: 2026/10/26 04:37:04 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:04.733749 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns DEBUG: 04:37:04.733757 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:04 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns WARNING: 2026/10/26 04:37:04 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:04.733782 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:04 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:04.733853 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:04 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:04.733884 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:04 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+ice WARNING: 2026/10/26 04:37:04 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:04 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:05 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:05 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:05 Failed to ping without candidate pairs. Connection is not possible yet.
+mdns DEBUG: 04:37:05.733988 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns DEBUG: 04:37:05.734046 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:05 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:05.734451 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:05 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:05.734672 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:05 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:05.734704 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:05 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:05.734797 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:05 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:05.734927 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:05 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:05.735067 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:05 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns WARNING: 2026/10/26 04:37:05 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+ice WARNING: 2026/10/26 04:37:05 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:05 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:06 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:06 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:06 Failed to ping without candidate pairs. Connection is not possible yet.
+mdns DEBUG: 04:37:06.734025 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:06 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:06.734186 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:06 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:06.734238 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:06 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:06.734261 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:06 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:06.734034 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:06 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:06.734301 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:06 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:06.734324 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:06 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:06.734340 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:06 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+ice WARNING: 2026/10/26 04:37:06 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:06 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:07 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:07 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:07 Failed to ping without candidate pairs. Connection is not possible yet.
+mdns DEBUG: 04:37:07.733640 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:07 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:07.733762 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:07 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:07.733807 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:07 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:07.733829 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:07 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:07.733636 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:07 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:07.733891 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:07 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:07.733906 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:07 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:07.733948 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:07 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+ice WARNING: 2026/10/26 04:37:07 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:07 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:08 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:08 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:08 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:08 Failed to discover mDNS candidate 2a88ed19-6057-4720-abbf-55b4a5658171.local: mDNS: context has elapsed
+mdns DEBUG: 04:37:08.733934 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:08 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:08.734072 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:08 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:08.734122 conn.go:486: [0x381fce06178] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:08 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:54403->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:08.734149 conn.go:492: [0x381fce06178] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:08 [0x381fce06178] failed to send mDNS packet (unicast) on interface 2: write udp [::]:42065->[ff02::fb]:5353: sendmsg: operation not permitted
+ice WARNING: 2026/10/26 04:37:08 Failed to discover mDNS candidate 665bc8b1-f3fb-4d70-921d-f60e23bc0d06.local: mDNS: context has elapsed
+ice WARNING: 2026/10/26 04:37:08 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:08 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:09 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:09 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:09 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:09 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:09 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:10 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:10 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:10 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:10 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:10 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:11 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:11 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:11 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:11 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:11 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:12 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:12 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:12 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:12 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:12 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:13 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:13 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:13 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:13 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:13 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:14 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:14 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:14 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:14 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:14 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:15 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:15 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:15 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:15 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:15 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:16 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:16 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:16 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:16 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:16 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:17 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:17 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:17 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:17 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:17 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:18 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:18 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:18 Failed to ping without candidate pairs. Connection is not possible yet.
+pc WARNING: 2026/10/26 04:37:18 Failed to start manager: connecting canceled by caller
+pc WARNING: 2026/10/26 04:37:18 Failed to start SCTP: DTLS not established
+ice INFO: 2026/10/26 04:37:18 Setting new connection state: Closed
+pc INFO: 2026/10/26 04:37:18 peer connection state changed: closed
+2026-10-26T04:37:18.740Z session_close session=1 peer=127.0.0.1:51532 reason=eof seconds=15.1 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+pc INFO: 2026/10/26 04:37:18 ICE connection state changed: closed
+2026-10-26T04:37:18.740Z pc_state session=1 state=closed
+2026-10-26T04:37:21.881Z session_open session=2 peer=127.0.0.1:44884 origin=null path=/rtc subprotocol=-
+pc INFO: 2026/10/26 04:37:21 signaling state changed to have-remote-offer
+ice DEBUG: 04:37:21.887732 agent.go:647: Started agent: isControlling? false, remoteUfrag: "r2MB", remotePwd: "8gZq8FNYQa7FrfOFDJgw7OR8"
+ice INFO: 2026/10/26 04:37:21 Setting new connection state: Checking
+pc INFO: 2026/10/26 04:37:21 signaling state changed to stable
+mdns DEBUG: 04:37:21.888065 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:21 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:21.888121 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:21 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:21.888166 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:21 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:21.888186 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:21 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+pc INFO: 2026/10/26 04:37:21 ICE connection state changed: checking
+pc INFO: 2026/10/26 04:37:21 peer connection state changed: connecting
+2026-10-26T04:37:21.888Z pc_state session=2 state=connecting
+ice WARNING: 2026/10/26 04:37:21 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:21 Failed to ping without candidate pairs. Connection is not possible yet.
+mdns DEBUG: 04:37:21.889915 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:21 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:21.890638 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+ice DEBUG: 04:37:21.888928 gather.go:894: Failed to resolve STUN host: udp6 stun.l.google.com:19302: lookup stun.l.google.com on 198.19.0.1:53: no such host
+ice WARNING: 2026/10/26 04:37:21 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:21 failed to get server reflexive address udp4 stun:stun.l.google.com:19302: write udp4 0.0.0.0:26125->198.18.2.11:19302: sendto: operation not permitted
+mdns WARNING: 2026/10/26 04:37:21 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:21.891188 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:21 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:21.891748 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:21 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+ice WARNING: 2026/10/26 04:37:22 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:22 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:22 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:22 Failed to ping without candidate pairs. Connection is not possible yet.
+mdns DEBUG: 04:37:22.888876 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:22 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:22.889039 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:22 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:22.889087 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:22 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:22.889106 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:22 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:22.890236 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:22 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:22.890259 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:22 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:22.890347 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:22 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:22.890364 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:22 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+ice WARNING: 2026/10/26 04:37:22 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:23 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:23 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:23 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:23 Failed to ping without candidate pairs. Connection is not possible yet.
+mdns DEBUG: 04:37:23.888895 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:23 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:23.889068 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:23 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:23.889123 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:23 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:23.889188 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:23 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:23.890382 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:23 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:23.890477 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:23 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:23.890515 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:23 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:23.890545 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:23 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+ice WARNING: 2026/10/26 04:37:23 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:24 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:24 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:24 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:24 Failed to ping without candidate pairs. Connection is not possible yet.
+mdns DEBUG: 04:37:24.888476 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:24 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:24.888668 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:24 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:24.888725 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:24 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:24.888782 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:24 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:24.889978 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:24 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:24.890019 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:24 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:24.890041 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:24 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:24.890060 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:24 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+ice WARNING: 2026/10/26 04:37:24 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:25 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:25 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:25 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:25 Failed to ping without candidate pairs. Connection is not possible yet.
+mdns DEBUG: 04:37:25.888780 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:25 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:25.888945 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:25 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:25.888995 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:25 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:25.889025 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:25 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:25.890468 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:25 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:25.890543 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:25 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:25.890573 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:25 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:25.890647 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:25 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+ice WARNING: 2026/10/26 04:37:25 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:26 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:26 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:26 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:26 Failed to ping without candidate pairs. Connection is not possible yet.
+mdns DEBUG: 04:37:26.889068 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:26 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:26.889226 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:26 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:26.889288 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:26 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:26.889308 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:26 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+ice WARNING: 2026/10/26 04:37:26 Failed to discover mDNS candidate 665bc8b1-f3fb-4d70-921d-f60e23bc0d06.local: mDNS: context has elapsed
+mdns DEBUG: 04:37:26.890442 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:26 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:26.890475 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:26 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:26.890495 conn.go:486: [0x381fce06230] writing question to unicast IPv4 224.0.0.251:5353
+mdns WARNING: 2026/10/26 04:37:26 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp 0.0.0.0:55918->224.0.0.251:5353: sendmsg: operation not permitted
+mdns DEBUG: 04:37:26.890530 conn.go:492: [0x381fce06230] writing question to unicast IPv6 [ff02::fb]:5353
+mdns WARNING: 2026/10/26 04:37:26 [0x381fce06230] failed to send mDNS packet (unicast) on interface 2: write udp [::]:47961->[ff02::fb]:5353: sendmsg: operation not permitted
+ice WARNING: 2026/10/26 04:37:26 Failed to discover mDNS candidate 2a88ed19-6057-4720-abbf-55b4a5658171.local: mDNS: context has elapsed
+ice WARNING: 2026/10/26 04:37:26 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:27 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:27 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:27 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:27 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:27 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:28 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:28 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:28 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:28 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:28 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:29 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:29 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:29 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:29 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:29 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:30 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:30 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:30 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:30 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:30 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:31 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:31 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:31 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:31 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:31 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:32 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:32 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:32 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:32 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:32 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:33 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:33 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:33 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:33 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:33 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:34 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:34 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:34 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:34 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:34 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:35 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:35 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:35 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:35 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:35 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:36 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:36 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:36 Failed to ping without candidate pairs. Connection is not possible yet.
+ice WARNING: 2026/10/26 04:37:36 Failed to ping without candidate pairs. Connection is not possible yet.
+pc WARNING: 2026/10/26 04:37:36 Failed to start manager: connecting canceled by caller
+pc WARNING: 2026/10/26 04:37:36 Failed to start SCTP: DTLS not established
+ice INFO: 2026/10/26 04:37:36 Setting new connection state: Closed
+pc INFO: 2026/10/26 04:37:36 peer connection state changed: closed
+2026-10-26T04:37:36.908Z session_close session=2 peer=127.0.0.1:44884 reason=eof seconds=15.0 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+pc INFO: 2026/10/26 04:37:36 ICE connection state changed: closed
+2026-10-26T04:37:36.908Z pc_state session=2 state=closed
+2026-10-26T04:37:36.958Z reject_origin peer=127.0.0.1:49628 origin=https://evil.example
+2026-10-26T04:37:36.960Z session_open session=3 peer=127.0.0.1:49640 origin=- path=/rtc subprotocol=-
+2026-10-26T04:37:36.961Z session_close session=3 peer=127.0.0.1:49640 reason=eof seconds=0.0 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:37:36.962Z session_open session=4 peer=127.0.0.1:49646 origin=https://nosuchmachine.net path=/rtc subprotocol=-
+2026-10-26T04:37:36.963Z session_open session=5 peer=127.0.0.1:49652 origin=https://nosuchmachine.net path=/some/other/path subprotocol=-
+2026-10-26T04:37:36.963Z session_close session=4 peer=127.0.0.1:49646 reason=eof seconds=0.0 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:37:36.964Z session_close session=5 peer=127.0.0.1:49652 reason=eof seconds=0.0 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:39:56.142Z signal signum=terminated
+2026-10-26T04:39:56.142Z shutdown sessions=0

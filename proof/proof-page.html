@@ -1,0 +1,246 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>sparta-rtc rung-a proof page</title>
+<body>
+<script>
+"use strict";
+// ------------------------------------------------------------------
+// Payloads are self-describing: [seq u32be][len u32be][filler][crc32 u32be]
+// for sizes >= 12; smaller payloads are a deterministic pattern of the
+// seq and are verified against the sender's retained copy (byte-for-byte
+// equality + one-message == one-datagram boundary check happen for ALL
+// sizes against that copy; the in-band crc is checked when present).
+const SIZES = [1, 16, 64, 200, 850, 1200, 1400, 4000, 16384];
+
+function crc32(buf) {
+  let table = crc32.table;
+  if (!table) {
+    table = crc32.table = new Int32Array(256);
+    for (let n = 0; n < 256; n++) {
+      let c = n;
+      for (let k = 0; k < 8; k++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+      table[n] = c;
+    }
+  }
+  let c = ~0;
+  for (let i = 0; i < buf.length; i++) c = table[(c ^ buf[i]) & 0xFF] ^ (c >>> 8);
+  return (~c) >>> 0;
+}
+
+function makePayload(seq) {
+  const size = SIZES[seq % SIZES.length];
+  const b = new Uint8Array(size);
+  for (let i = 0; i < size; i++) b[i] = (seq * 31 + i * 7) & 0xFF;
+  if (size >= 8) {
+    const dv = new DataView(b.buffer);
+    dv.setUint32(0, seq >>> 0);
+    dv.setUint32(4, size);
+  }
+  if (size >= 12) {
+    const dv = new DataView(b.buffer);
+    dv.setUint32(size - 4, crc32(b.subarray(0, size - 4)));
+  }
+  return b;
+}
+
+function inbandCrcOk(buf) {
+  if (buf.length < 12) return true; // nothing in-band to check
+  const dv = new DataView(buf.buffer, buf.byteOffset, buf.byteLength);
+  return dv.getUint32(buf.length - 4) === crc32(buf.subarray(0, buf.length - 4));
+}
+
+function bytesEqual(a, b) {
+  if (a.length !== b.length) return false;
+  for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return false;
+  return true;
+}
+
+// A pipelined echo workload over an abstract send/onmessage transport.
+// Resolves with counts + raw RTT samples; the driver computes percentiles.
+function runWorkload(transport, total, windowSize, watchdogMs) {
+  return new Promise((resolve) => {
+    const outstanding = new Map(); // seq -> {bytes, t0}
+    const rtts = [];
+    let sent = 0, received = 0, bytesSent = 0, bytesReceived = 0;
+    let checksumFailures = 0, equalityFailures = 0, boundaryFailures = 0, unexpected = 0;
+    let done = false;
+    const finish = (why) => {
+      if (done) return;
+      done = true;
+      resolve({ why, sent, received, bytesSent, bytesReceived, lost: sent - received,
+                 checksumFailures, equalityFailures, boundaryFailures, unexpected, rtts });
+    };
+    const watchdog = setTimeout(() => finish("watchdog"), watchdogMs);
+    const maybeDone = () => {
+      if (received + (sent - received) >= total && outstanding.size === 0 && sent >= total) {
+        clearTimeout(watchdog); finish("complete");
+      }
+    };
+    // Paced to 150 pps: both production transports cap client->server
+    // at 300 pps (house rate sanity), and an unpaced loopback ping-pong
+    // would trip that guard — a real game client never sends that fast.
+    // t0 is stamped at the actual send, so pacing never inflates RTT.
+    const SEND_INTERVAL_MS = 1000 / 150;
+    let lastSend = 0, pumpScheduled = false;
+    const pump = () => {
+      while (!done && outstanding.size < windowSize && sent < total) {
+        const now = performance.now();
+        const wait = SEND_INTERVAL_MS - (now - lastSend);
+        if (wait > 0) {
+          if (!pumpScheduled) {
+            pumpScheduled = true;
+            setTimeout(() => { pumpScheduled = false; pump(); }, wait);
+          }
+          return;
+        }
+        lastSend = now;
+        const seq = sent;
+        const payload = makePayload(seq);
+        outstanding.set(seq, { bytes: payload, t0: performance.now() });
+        transport.send(payload);
+        sent++; bytesSent += payload.length;
+      }
+    };
+    transport.onmessage = (data) => {
+      const buf = new Uint8Array(data);
+      received++; bytesReceived += buf.length;
+      if (!inbandCrcOk(buf)) checksumFailures++;
+      // Identify the echo: by in-band seq when present, else the unique
+      // small outstanding payload.
+      let seq = -1;
+      if (buf.length >= 8) {
+        const dv = new DataView(buf.buffer, buf.byteOffset, buf.byteLength);
+        const s = dv.getUint32(0);
+        if (outstanding.has(s)) seq = s;
+      }
+      if (seq < 0) {
+        for (const [s, rec] of outstanding) if (rec.bytes.length === buf.length) { seq = s; break; }
+      }
+      if (seq < 0) { unexpected++; return; }
+      const rec = outstanding.get(seq);
+      outstanding.delete(seq);
+      if (buf.length !== rec.bytes.length) boundaryFailures++;
+      else if (!bytesEqual(buf, rec.bytes)) equalityFailures++;
+      rtts.push(performance.now() - rec.t0);
+      pump(); maybeDone();
+    };
+    pump();
+  });
+}
+
+// ---------------------------------------------------------------- RTC path
+async function rtcConnect(sigUrl, openTimeoutMs) {
+  const diag = { answerReceived: false, localCandidates: 0, remoteCandidates: 0,
+                 dcOpened: false, iceState: null, connState: null };
+  const ws = new WebSocket(sigUrl);
+  const pc = new RTCPeerConnection({ iceServers: [] }); // loopback: host candidates suffice
+  const dc = pc.createDataChannel("sparta", { ordered: false, maxRetransmits: 0 });
+  pc.onicecandidate = (e) => {
+    if (e.candidate && ws.readyState === 1) {
+      diag.localCandidates++;
+      ws.send(JSON.stringify({ type: "ice", candidate: e.candidate.candidate,
+        sdpMid: e.candidate.sdpMid, sdpMLineIndex: e.candidate.sdpMLineIndex }));
+    }
+  };
+  ws.onmessage = async (e) => {
+    const m = JSON.parse(e.data);
+    if (m.type === "answer") {
+      diag.answerReceived = true;
+      await pc.setRemoteDescription({ type: "answer", sdp: m.sdp });
+    } else if (m.type === "ice" && m.candidate) {
+      diag.remoteCandidates++;
+      await pc.addIceCandidate({ candidate: m.candidate, sdpMid: m.sdpMid,
+        sdpMLineIndex: m.sdpMLineIndex }).catch(() => {});
+    }
+  };
+  await new Promise((res, rej) => { ws.onopen = res; ws.onerror = rej; });
+  const offer = await pc.createOffer();
+  await pc.setLocalDescription(offer);
+  ws.send(JSON.stringify({ type: "offer", sdp: offer.sdp }));
+  await new Promise((res) => {
+    dc.onopen = () => { diag.dcOpened = true; res(); };
+    setTimeout(res, openTimeoutMs);
+  });
+  diag.iceState = pc.iceConnectionState; diag.connState = pc.connectionState;
+  return { ws, pc, dc, diag };
+}
+
+window.__proof = {
+  // Full workload when the channel opens; otherwise the signaling
+  // diagnostics (the lab sandbox blocks ICE media — see results.md).
+  async rtcRun(sigUrl, total) {
+    const { ws, pc, dc, diag } = await rtcConnect(sigUrl, 15000);
+    if (!diag.dcOpened) {
+      try { pc.close(); ws.close(); } catch {}
+      return { dcOpened: false, ...diag };
+    }
+    const transport = { send: (b) => dc.send(b), onmessage: null };
+    dc.onmessage = (e) => transport.onmessage(e.data);
+    const r = await runWorkload(transport, total, 64, 60000);
+    r.dcOpened = true;
+    r.pcState = pc.connectionState; r.dcState = dc.readyState;
+    try { dc.close(); pc.close(); ws.close(); } catch {}
+    return r;
+  },
+
+  // Guard smoke for the WS-shaped sibling (identical house semantics:
+  // >300pps drops, session closed at the 10th abusive drop, close code
+  // 1008 / reason rate_limit — see the bridge log).
+  async wsBurst(url, blast) {
+    const ws = new WebSocket(url);
+    ws.binaryType = "arraybuffer";
+    let echoes = 0;
+    ws.onmessage = () => { echoes++; };
+    await new Promise((res, rej) => { ws.onopen = res; ws.onerror = rej; });
+    const closed = new Promise((res) => {
+      ws.onclose = (e) => res(e.code);
+      setTimeout(() => res(-1), 8000);
+    });
+    const payload = new Uint8Array(32).fill(0xAB);
+    let sent = 0;
+    for (let i = 0; i < blast; i++) { try { ws.send(payload); sent++; } catch { break; } }
+    const closeCode = await closed;
+    return { blast, sent, echoes, closeCode };
+  },
+
+  async wsRun(url, total) {
+    const ws = new WebSocket(url);
+    ws.binaryType = "arraybuffer";
+    await new Promise((res, rej) => { ws.onopen = res; ws.onerror = rej; });
+    const transport = { send: (b) => ws.send(b), onmessage: null };
+    ws.onmessage = (e) => transport.onmessage(e.data);
+    const r = await runWorkload(transport, total, 64, 60000);
+    try { ws.close(); } catch {}
+    return r;
+  },
+
+  // Guard smoke: blast far beyond 300 pps on a fresh RTC session and
+  // watch the gateway close it (rate_limit after 10 abusive drops).
+  async rtcBurst(sigUrl, blast) {
+    const { ws, pc, dc, diag } = await rtcConnect(sigUrl, 15000);
+    if (!diag.dcOpened) {
+      try { pc.close(); ws.close(); } catch {}
+      return { dcOpened: false, ...diag };
+    }
+    let echoes = 0;
+    dc.onmessage = () => { echoes++; };
+    const closed = new Promise((res) => {
+      dc.onclose = () => res("dc_close");
+      pc.onconnectionstatechange = () => {
+        if (pc.connectionState === "closed" || pc.connectionState === "failed") res("pc_" + pc.connectionState);
+      };
+      setTimeout(() => res("timeout"), 8000);
+    });
+    const payload = new Uint8Array(32).fill(0xAB);
+    for (let i = 0; i < blast; i++) { try { dc.send(payload); } catch { break; } }
+    const how = await closed;
+    await new Promise((r) => setTimeout(r, 300));
+    const out = { blast, echoes, closedHow: how, dcState: dc.readyState, pcState: pc.connectionState };
+    try { pc.close(); ws.close(); } catch {}
+    return out;
+  },
+};
+</script>
+proof page ready
+</body>
+</html>

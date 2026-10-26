@@ -1,0 +1,12 @@
+=== RUN   TestRateWindow
+--- PASS: TestRateWindow (0.00s)
+=== RUN   TestRegistryCap
+--- PASS: TestRegistryCap (0.00s)
+=== RUN   TestOriginLawAndCap
+2026-10-26T04:39:55.989Z reject_origin peer=127.0.0.1:49406 origin=https://evil.example
+2026-10-26T04:39:55.990Z session_open session=1 peer=127.0.0.1:49412 origin=- path=/rtc subprotocol=-
+2026-10-26T04:39:55.990Z reject_cap peer=127.0.0.1:49422 sessions=1
+2026-10-26T04:39:55.990Z session_close session=1 peer=127.0.0.1:49412 reason=eof seconds=0.0 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+--- PASS: TestOriginLawAndCap (0.00s)
+PASS
+ok  	sparta-rtc	0.011s

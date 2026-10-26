@@ -1,0 +1,22 @@
+2026-10-26T04:27:35.866Z listen bind=127.0.0.1 port=26013 server=127.0.0.1:26099 max_sessions=2 idle_timeout=120 max_pps=300 stun=stun:stun.l.google.com:19302 ice_ports=26100-26299 origins=https://nosuchmachine.net
+2026-10-26T04:29:09.323Z upgrade_failed peer=127.0.0.1:37940 error=websocket.HandshakeError
+2026-10-26T04:29:09.324Z upgrade_failed peer=127.0.0.1:37954 error=websocket.HandshakeError
+2026-10-26T04:29:09.329Z upgrade_failed peer=127.0.0.1:37956 error=websocket.HandshakeError
+2026-10-26T04:31:50.800Z signal signum=terminated
+2026-10-26T04:31:50.800Z shutdown sessions=0
+2026-10-26T04:33:27.171Z listen bind=127.0.0.1 port=26013 server=127.0.0.1:26099 max_sessions=2 idle_timeout=120 max_pps=300 stun=stun:stun.l.google.com:19302 ice_ports=26100-26299 origins=https://nosuchmachine.net
+2026-10-26T04:34:06.543Z session_open session=1 peer=127.0.0.1:43876 origin=https://nosuchmachine.net path=/rtc subprotocol=-
+2026-10-26T04:34:06.544Z session_open session=2 peer=127.0.0.1:43884 origin=https://nosuchmachine.net path=/rtc subprotocol=-
+2026-10-26T04:34:06.544Z reject_cap peer=127.0.0.1:43894 sessions=2
+2026-10-26T04:34:06.564Z session_close session=1 peer=127.0.0.1:43876 reason=eof seconds=0.0 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:34:06.564Z session_close session=2 peer=127.0.0.1:43884 reason=eof seconds=0.0 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:36:26.069Z signal signum=terminated
+2026-10-26T04:36:26.074Z shutdown sessions=0
+2026-10-26T04:36:58.697Z listen bind=127.0.0.1 port=26013 server=127.0.0.1:26099 max_sessions=2 idle_timeout=120 max_pps=300 stun=stun:stun.l.google.com:19302 ice_ports=26100-26299 origins=https://nosuchmachine.net
+2026-10-26T04:37:36.966Z session_open session=1 peer=127.0.0.1:52538 origin=https://nosuchmachine.net path=/rtc subprotocol=-
+2026-10-26T04:37:36.969Z session_open session=2 peer=127.0.0.1:52550 origin=https://nosuchmachine.net path=/rtc subprotocol=-
+2026-10-26T04:37:36.970Z reject_cap peer=127.0.0.1:52558 sessions=2
+2026-10-26T04:37:36.971Z session_close session=1 peer=127.0.0.1:52538 reason=eof seconds=0.0 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:37:36.971Z session_close session=2 peer=127.0.0.1:52550 reason=eof seconds=0.0 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:39:56.141Z signal signum=terminated
+2026-10-26T04:39:56.141Z shutdown sessions=0

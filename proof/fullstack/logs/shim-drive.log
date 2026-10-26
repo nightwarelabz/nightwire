@@ -1,0 +1,9 @@
+[+0.6s] chromium up: Chrome/152.0.7977.82
+[+1.5s] page loaded, clicking play
+[+6.9s] con[0] plateHidden=false status="data/data20091001.pk3: 82 MB of 846 MB (verified when whole)" tail: 
+[+78.2s] ENGINE STARTED (plate hidden) at +76.7s after click
+[+78.2s] con[2434] plateHidden=true status="data/data20091001.pk3: 846 MB of 846 MB (verified when whole)" tail:   : 0x8010 |     Frequency : 44100 |     Samples   : 1024 | Sound format: 44100Hz, 2 channels, 16 bits per sample | CD Audio Initialized | menu: program loaded (crc 16167, size 603K) | Looks like you are rendering without using requestAnimationFrame for the main loop. You should use 0 for the frame rate in emscripten_set_main_loop in order to use requestAnimationFrame, as that can greatly improve your frame rates! | 
+[+90.9s] con[2755] plateHidden=true status="data/data20091001.pk3: 846 MB of 846 MB (verified when whole)" tail: p in order to use requestAnimationFrame, as that can greatly improve your frame rates! | [1;31mConnect: failed, no reply from 127.0.0.1:26000[m | [1;33mmenu VM warning: Attempted division of 0.000000 by zero[m | [1;33mmenu VM warning: Attempted division of 0.000000 by zero[m | [1;33mmenu VM warning: Attempted division of 0.000000 by zero[m | [1;33mmenu VM warning: Attempted division of 0.000000 by zero[m | 
+[+106.4s] SHOT shim-world.png
+[+114.7s] SHOT shim-world.png
+[+124.3s] SHOT shim-world.png

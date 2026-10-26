@@ -1,0 +1,5 @@
+2026-10-26T04:43:46.629Z listen bind=127.0.0.1 port=26001 server=127.0.0.1:26000 max_sessions=64 idle_timeout=120 max_pps=300 origins=http://127.0.0.1:18770
+2026-10-26T04:43:52.272Z session_open session=1 peer=127.0.0.1:41186 origin=- subprotocol=sparta
+2026-10-26T04:43:57.290Z session_close session=1 peer=127.0.0.1:41186 reason=eof seconds=5.0 to_server_pkts=1 to_server_bytes=13 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:50:24.589Z session_open session=2 peer=127.0.0.1:41342 origin=http://127.0.0.1:18770 subprotocol=sparta
+2026-10-26T04:50:38.479Z session_open session=3 peer=127.0.0.1:51210 origin=http://127.0.0.1:18770 subprotocol=sparta

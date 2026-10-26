@@ -1,0 +1,9 @@
+2026-10-26T04:58:12.019Z listen bind=127.0.0.1 port=26003 server=127.0.0.1:26000 max_sessions=64 idle_timeout=120 max_pps=300 stun=stun:stun.l.google.com:19302 ice_ports=26100-26299 origins=http://127.0.0.1:18770
+2026-10-26T04:59:35.295Z session_open session=1 peer=127.0.0.1:40734 origin=http://127.0.0.1:18770 path=/rtc subprotocol=-
+2026-10-26T04:59:35.726Z pc_state session=1 state=connecting
+2026-10-26T04:59:43.164Z session_close session=1 peer=127.0.0.1:40734 reason=eof seconds=7.9 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:59:43.164Z pc_state session=1 state=closed
+2026-10-26T04:59:49.594Z session_open session=2 peer=127.0.0.1:38142 origin=http://127.0.0.1:18770 path=/rtc subprotocol=-
+2026-10-26T04:59:49.608Z pc_state session=2 state=connecting
+2026-10-26T04:59:58.244Z session_close session=2 peer=127.0.0.1:38142 reason=eof seconds=8.7 to_server_pkts=0 to_server_bytes=0 to_client_pkts=0 to_client_bytes=0 rate_drops=0 udp_errors=0
+2026-10-26T04:59:58.244Z pc_state session=2 state=closed

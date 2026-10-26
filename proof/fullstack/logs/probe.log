@@ -1,0 +1,7 @@
+== check 1: unconnected UDP send ==
+unconnected sendto: OSError errno=1 Operation not permitted
+connected send: SUCCEEDED
+== check 2: getinfo through bridge ws://127.0.0.1:26002 (door) ==
+handshake: HTTP/1.1 101 Switching Protocols | protocol: ['HTTP/1.1 101 Switching Protocols', 'Sec-WebSocket-Protocol: sparta']
+frames back in 5s: 0
+probe done
