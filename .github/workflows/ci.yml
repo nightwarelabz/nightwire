@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        go: ['1.24.x', '1.27.x']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: ${{ matrix.go }}
+          cache: true
+      - run: go vet ./...
+      - run: go test -race -count=1 -timeout=90s ./...
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test proof/validate-results.test.mjs
+      - run: python3 -m unittest discover -s proof -p 'test_*.py'
+      - run: sh -n build.sh run-gateway-mac.sh proof/run-proof.sh
+
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.27.3'
+          cache: true
+      - run: ./build.sh
+      - name: Verify binary target formats
+        run: |
+          file dist/sparta-rtc-linux-amd64 | tee linux-target.txt
+          file dist/sparta-rtc-darwin-arm64 | tee darwin-target.txt
+          python3 - <<'PY'
+          from pathlib import Path
+          assert 'ELF 64-bit' in Path('linux-target.txt').read_text()
+          assert 'x86-64' in Path('linux-target.txt').read_text()
+          assert 'Mach-O 64-bit' in Path('darwin-target.txt').read_text()
+          assert 'arm64' in Path('darwin-target.txt').read_text()
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gateway-${{ matrix.os }}
+          path: dist/*

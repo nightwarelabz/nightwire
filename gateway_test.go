@@ -25,12 +25,15 @@ import (
 
 func testConfig() *config {
 	cfg := &config{
-		serverHost:   "127.0.0.1",
-		serverPort:   26099,
-		maxSessions:  64,
-		idleTimeout:  3600,
-		maxPPS:       300,
-		allowOrigins: map[string]bool{"https://nosuchmachine.net": true},
+		serverHost:       "127.0.0.1",
+		serverPort:       26099,
+		port:             26003,
+		maxSessions:      64,
+		idleTimeout:      3600,
+		setupTimeout:     10 * time.Second,
+		maxBufferedBytes: 256 << 10,
+		maxPPS:           300,
+		allowOrigins:     map[string]bool{"https://nosuchmachine.net": true},
 	}
 	return cfg
 }

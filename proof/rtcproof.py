@@ -18,11 +18,12 @@ import hashlib
 import json
 import sys
 
-import websockets
-from aiortc import RTCConfiguration, RTCIceServer, RTCPeerConnection, RTCSessionDescription
-from aiortc.rtcicetransport import RTCIceCandidate
-
 STUN = "stun:stun.l.google.com:19302"
+
+
+def census_complete(sent, received, closed):
+    """A successful census includes both exact echoes and rate-limit closure."""
+    return bool(closed) and sorted(received) == sorted(sent)
 
 
 def cand_to_string(c):
@@ -36,6 +37,7 @@ def cand_to_string(c):
 
 
 def parse_candidate(text, mid, mline):
+    from aiortc.rtcicetransport import RTCIceCandidate
     # positional parse, done by hand so no aiortc helper version matters:
     # candidate:<foundation> <component> <transport> <priority> <ip> <port> typ <type> [raddr x rport y] [tcptype z]
     t = text.split()
@@ -53,6 +55,8 @@ def parse_candidate(text, mid, mline):
 
 
 async def connect(url, origin):
+    import websockets
+    from aiortc import RTCConfiguration, RTCIceServer, RTCPeerConnection, RTCSessionDescription
     pc = RTCPeerConnection(RTCConfiguration(iceServers=[RTCIceServer(urls=STUN)]))
     dc = pc.createDataChannel("sparta", ordered=False, maxRetransmits=0)
     state = {"open": asyncio.Event(), "msgs": [], "closed": asyncio.Event()}
@@ -95,10 +99,20 @@ async def connect(url, origin):
     except asyncio.TimeoutError:
         print("DC_OPEN_TIMEOUT ice=%s conn=%s" % (pc.iceConnectionState, pc.connectionState))
         pump_task.cancel()
+        await ws.close()
         await pc.close()
         return None, None, None
     print("DC OPEN ice=%s" % pc.iceConnectionState)
+    state["ws"] = ws
+    state["pump_task"] = pump_task
     return pc, dc, state
+
+
+async def disconnect(pc, state):
+    await state["ws"].close()
+    state["pump_task"].cancel()
+    await asyncio.gather(state["pump_task"], return_exceptions=True)
+    await pc.close()
 
 
 async def mode_getinfo():
@@ -124,7 +138,7 @@ async def mode_getinfo():
         print("GETINFO NO REPLY")
         rc = 3
     await asyncio.sleep(0.3)
-    await pc.close()
+    await disconnect(pc, state)
     return rc
 
 
@@ -149,6 +163,8 @@ async def mode_census():
     if sorted(got) != sorted(sent):
         bad = 1
     print("CENSUS received=%d/300 byte_exact_set=%s" % (len(got), "yes" if not bad else "NO"))
+    # Give the census packets their own rate window before the abuse probe.
+    await asyncio.sleep(1.05)
     # blast: 2000 tiny messages — the gateway's 300 pps sanity window
     # must forward ~300, drop the rest, and close with rate_limit.
     before = len(state["msgs"])
@@ -165,8 +181,8 @@ async def mode_census():
     await asyncio.sleep(0.5)
     echoed = len(state["msgs"]) - before
     print("BLAST echoes_before_close=%d dc_closed=%s" % (echoed, closed))
-    await pc.close()
-    return 0 if (len(got) == 300 and not bad) else 5
+    await disconnect(pc, state)
+    return 0 if census_complete(sent, got, closed) else 5
 
 
 if __name__ == "__main__":

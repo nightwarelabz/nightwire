@@ -54,9 +54,18 @@ everything else.
   (`--max-pps`); excess dropped; the session is closed after 10
   abusive drops (`rate_limit`).
 - **Idle reaper**: ~120 s (`--idle-timeout`) without traffic either way.
+- **Setup deadline**: 15 s (`--setup-timeout 15s`) from signaling
+  acceptance, including clients that never send an offer. Signaling
+  traffic cannot extend this budget or keep an idle game session alive.
+- **Signaling bounds**: 64 KiB per message, 128 ICE candidates per
+  session, 4 KiB per candidate, and 5 s write deadlines. One offer and
+  one `sparta` channel with the documented unreliable settings are accepted.
+- **Backpressure**: at most 256 KiB of queued DataChannel payloads
+  (`--max-buffered-bytes`). New server datagrams that would exceed this
+  budget are dropped and counted; the session stays open.
 - **Message ceiling**: 65507 bytes.
 - **Logging**: structured one-line events (`session_open`,
-  `session_close` with packet/byte totals, `rate_drop`, …), metadata
+  `session_close` with packet/byte totals and backpressure drops, `rate_drop`, …), metadata
   only — payloads are never logged.
 
 ## ICE / firewall notes
@@ -81,15 +90,44 @@ everything else.
 Single static binary, `CGO_ENABLED=0`, Go + pion/webrtc (versions
 pinned in `go.mod`/`go.sum`). Flags mirror the bridge:
 `--bind --port --server-host --server-port --max-sessions
---idle-timeout --max-pps --stun --allow-origin --log-file`.
+--idle-timeout --max-pps --stun --allow-origin --log-file`, plus
+`--setup-timeout` and `--max-buffered-bytes`. Build targets are explicit
+on every host; `dist/SHA256SUMS` records the resulting binaries.
+
+## Checks
+
+```sh
+go test -race -count=1 ./...
+go vet ./...
+node --test proof/validate-results.test.mjs
+python3 -m unittest discover -s proof -p 'test_*.py'
+```
+
+The Go suite uses real Pion peers, a signaling WebSocket, and loopback
+UDP sockets to check byte-exact datagrams through 65,507 bytes, the
+rate-limit close, oversized-message rejection, and session lifecycle
+races. It advertises a fixed loopback interface so runners do not need
+permission to enumerate host NICs. No STUN or external game server is
+needed. CI runs race checks on Go 1.24 and 1.27 and verifies both build
+targets from Linux and macOS hosts.
 
 ## Proof
 
-`proof/` holds the rung-(a) lab proof (`run-proof.sh`): a UDP echo
+`proof/` also holds the browser proof (`run-proof.sh`): a UDP echo
 sink stands in for the game server; a real headless Chromium drives
 the signaling + workload page; the same workload runs through the real
-`sparta-bridge.py` for comparison. See `proof/results.md` — including
-why the DataChannel media path itself cannot be exercised inside the
-lab sandbox (its egress policy returns EPERM for every send on an
-unconnected UDP socket, which is how ICE sends STUN checks; the
-gateway's guard arithmetic is pinned by `gateway_test.go` instead).
+`sparta-bridge.py` for comparison. It requires Go, Node 22+, Python 3,
+Chromium, a native built gateway, and the separate bridge checkout:
+
+```sh
+PROOF_BRIDGE_SCRIPT=/absolute/path/to/sparta-bridge.py \
+CHROME_BIN=/absolute/path/to/chromium ./proof/run-proof.sh
+```
+
+`GO` and `PROOF_RTC_BIN` override tool/binary discovery. Test failures
+return a nonzero exit status. An unavailable RTC media path fails by
+default; `PROOF_ALLOW_BLOCKED_RTC=1` permits a diagnostic run that marks
+those checks **blocked**, never passed. Reports are generated from the
+current measurements without assuming a particular network restriction.
+The committed `proof/results.md` and `REPORT.md` preserve the original
+lab run; they do not establish current WAN or production performance.
